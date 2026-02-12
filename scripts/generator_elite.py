@@ -408,8 +408,17 @@ def generate_elite_html():
         
         .card-score {{
             font-weight: 600;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             color: var(--yellow);
+            background: rgba(255,246,127,0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }}
+        
+        .card-score::before {{
+            content: "⚡";
+            margin-right: 3px;
+            font-size: 0.6rem;
         }}
         
         .card-tag {{
@@ -522,8 +531,17 @@ def generate_elite_html():
         
         .tool-score {{
             font-weight: 600;
-            font-size: 0.75rem;
+            font-size: 0.65rem;
             color: var(--yellow);
+            background: rgba(255,246,127,0.1);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }}
+        
+        .tool-score::before {{
+            content: "⚡";
+            margin-right: 2px;
+            font-size: 0.55rem;
         }}
         
         .tool-price {{
