@@ -284,7 +284,7 @@ def generate_elite_html():
             font-family: inherit;
             border: 1px solid #2a2a2a;
             border-radius: 8px;
-            background: #111111;
+            background: #1e1e1e;
             color: var(--text);
             transition: all 0.3s ease;
             box-shadow: 0 4px 16px rgba(0,0,0,0.6);
@@ -319,8 +319,8 @@ def generate_elite_html():
         }}
         
         .bento-card {{
-            background: #111111;
-            border: 1px solid #252525;
+            background: #1e1e1e;
+            border: 1px solid #333333;
             border-radius: 10px;
             padding: 14px;
             text-decoration: none;
@@ -476,8 +476,8 @@ def generate_elite_html():
         }}
         
         .tool-card {{
-            background: #111111;
-            border: 1px solid #252525;
+            background: #1e1e1e;
+            border: 1px solid #333333;
             border-radius: 8px;
             padding: 10px 12px;
             text-decoration: none;
@@ -604,8 +604,8 @@ def generate_elite_html():
         }}
         
         .curate-card {{
-            background: #111111;
-            border: 1px solid #252525;
+            background: #1e1e1e;
+            border: 1px solid #333333;
             border-radius: 12px;
             padding: 20px;
             text-align: center;
