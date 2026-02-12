@@ -4,184 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>200 AI Tools for Builders | The Builder Weekly</title>
-    <meta name="description" content="Curated list of 200 AI-native tools across 20 categories. Updated February 2026.">
+    <meta name="description" content="Curated list of the hottest AI tools, updated daily. No outdated tools - only what builders are using right now.">
     <meta property="og:title" content="200 AI Tools for Builders">
-    <meta property="og:description" content="The definitive list of AI tools that actually work. Curated by The Builder Weekly.">
-    <meta property="og:type" content="website">
+    <meta property="og:description" content="Daily-updated directory of AI tools that actually work. Curated by The Builder Weekly.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #0a0a0a;
-            color: #e5e5e5;
-            line-height: 1.6;
-        }
+        body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #e5e5e5; line-height: 1.6; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        
-        header {
-            padding: 60px 0 40px;
-            text-align: center;
-            border-bottom: 1px solid #222;
-        }
-        header h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #FFF67F 0%, #FFD700 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 16px;
-        }
-        header p {
-            color: #888;
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .updated {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 8px 16px;
-            background: #1a1a1a;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            color: #666;
-        }
-        
-        .search-box {
-            padding: 30px 0;
-            position: sticky;
-            top: 0;
-            background: #0a0a0a;
-            z-index: 100;
-            border-bottom: 1px solid #222;
-        }
-        #search {
-            width: 100%;
-            max-width: 500px;
-            padding: 14px 20px;
-            font-size: 1rem;
-            border: 1px solid #333;
-            border-radius: 8px;
-            background: #111;
-            color: #fff;
-            display: block;
-            margin: 0 auto;
-        }
+        header { padding: 60px 0 40px; text-align: center; border-bottom: 1px solid #222; }
+        header h1 { font-size: 3rem; font-weight: 700; background: linear-gradient(135deg, #FFF67F 0%, #FFD700 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 16px; }
+        header p { color: #888; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+        .updated { display: inline-block; margin-top: 20px; padding: 8px 16px; background: #1a1a1a; border-radius: 20px; font-size: 0.85rem; color: #666; }
+        .live-badge { background: #22c55e; color: #000; padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; margin-left: 8px; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .search-box { padding: 30px 0; position: sticky; top: 0; background: #0a0a0a; z-index: 100; border-bottom: 1px solid #222; }
+        #search { width: 100%; max-width: 500px; padding: 14px 20px; font-size: 1rem; border: 1px solid #333; border-radius: 8px; background: #111; color: #fff; display: block; margin: 0 auto; }
         #search:focus { outline: none; border-color: #FFF67F; }
-        #search::placeholder { color: #555; }
-        
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            padding: 30px 0;
-            flex-wrap: wrap;
-        }
-        .stat {
-            text-align: center;
-        }
-        .stat-num {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #FFF67F;
-        }
+        .stats { display: flex; justify-content: center; gap: 40px; padding: 30px 0; flex-wrap: wrap; }
+        .stat { text-align: center; }
+        .stat-num { font-size: 2.5rem; font-weight: 700; color: #FFF67F; }
         .stat-label { color: #666; font-size: 0.9rem; }
-        
+        .hot-section { background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%); border: 1px solid #333; border-radius: 16px; padding: 24px; margin: 30px 0; }
+        .hot-section h3 { color: #FFF67F; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+        .hot-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+        .hot-tool { background: #222; border-radius: 8px; padding: 12px; }
+        .hot-tool a { color: #fff; text-decoration: none; font-weight: 500; }
+        .hot-tool a:hover { color: #FFF67F; }
+        .hot-score { font-size: 0.75rem; color: #22c55e; margin-top: 4px; }
         .categories { padding: 40px 0; }
-        
-        .category {
-            margin-bottom: 50px;
-        }
-        .category-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid #222;
-        }
-        .category-icon {
-            font-size: 1.5rem;
-        }
-        .category h2 {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: #fff;
-        }
-        .category-count {
-            background: #1a1a1a;
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            color: #888;
-        }
-        
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 16px;
-        }
-        
-        .tool {
-            background: #111;
-            border: 1px solid #222;
-            border-radius: 10px;
-            padding: 16px;
-            transition: all 0.2s;
-        }
-        .tool:hover {
-            border-color: #FFF67F;
-            transform: translateY(-2px);
-        }
-        .tool a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
-        }
+        .category { margin-bottom: 50px; }
+        .category-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid #222; }
+        .category-icon { font-size: 1.5rem; }
+        .category h2 { font-size: 1.4rem; font-weight: 600; color: #fff; }
+        .category-count { background: #1a1a1a; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; color: #888; }
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+        .tool { background: #111; border: 1px solid #222; border-radius: 10px; padding: 16px; transition: all 0.2s; position: relative; }
+        .tool:hover { border-color: #FFF67F; transform: translateY(-2px); }
+        .tool a { color: #fff; text-decoration: none; font-weight: 500; }
         .tool a:hover { color: #FFF67F; }
-        .tool-desc {
-            color: #777;
-            font-size: 0.85rem;
-            margin-top: 6px;
-        }
-        .tool-tag {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 3px 8px;
-            background: #1a1a1a;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            color: #555;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 60px 0;
-            border-top: 1px solid #222;
-            color: #555;
-        }
+        .tool-desc { color: #777; font-size: 0.85rem; margin-top: 6px; }
+        .tool-meta { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+        .tool-tag { padding: 3px 8px; background: #1a1a1a; border-radius: 4px; font-size: 0.75rem; color: #555; }
+        .tool-score { position: absolute; top: 12px; right: 12px; font-size: 0.7rem; color: #444; }
+        .tool-hot { border-color: #FFF67F33; }
+        .tool-hot::before { content: "🔥"; position: absolute; top: -8px; right: -8px; }
+        footer { text-align: center; padding: 60px 0; border-top: 1px solid #222; color: #555; }
         footer a { color: #FFF67F; text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
-        
+        .graveyard-link { margin-top: 20px; }
+        .graveyard-link a { color: #666; font-size: 0.9rem; }
         .hidden { display: none !important; }
-        
-        @media (max-width: 600px) {
-            header h1 { font-size: 2rem; }
-            .stats { gap: 24px; }
-            .stat-num { font-size: 2rem; }
-        }
+        @media (max-width: 600px) { header h1 { font-size: 2rem; } }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
             <h1>200 AI Tools for Builders</h1>
-            <p>The definitive list of AI-native tools that actually work. No vaporware. No waitlists. Tools you can use today.</p>
-            <span class="updated">Updated February 2026</span>
+            <p>Daily-updated directory of AI tools that actually work. Dead tools get removed. Only what builders are using right now.</p>
+            <span class="updated">Updated February 12, 2026<span class="live-badge">LIVE</span></span>
         </div>
     </header>
     
@@ -193,472 +75,1003 @@
     
     <main class="container">
         <div class="stats">
-            <div class="stat">
-                <div class="stat-num">200</div>
-                <div class="stat-label">Tools</div>
-            </div>
-            <div class="stat">
-                <div class="stat-num">20</div>
-                <div class="stat-label">Categories</div>
-            </div>
-            <div class="stat">
-                <div class="stat-num">100%</div>
-                <div class="stat-label">AI-Native</div>
+            <div class="stat"><div class="stat-num">93</div><div class="stat-label">Active Tools</div></div>
+            <div class="stat"><div class="stat-num">19</div><div class="stat-label">Categories</div></div>
+            <div class="stat"><div class="stat-num">2</div><div class="stat-label">In Graveyard</div></div>
+        </div>
+        
+        <div class="hot-section">
+            <h3>🔥 Hot This Week</h3>
+            <div class="hot-grid">
+                <div class="hot-tool">
+                    <a href="https://claude.ai" target="_blank">Claude</a>
+                    <div class="hot-score">Score: 97</div>
+                </div>
+                <div class="hot-tool">
+                    <a href="https://cursor.sh" target="_blank">Cursor</a>
+                    <div class="hot-score">Score: 95</div>
+                </div>
+                <div class="hot-tool">
+                    <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
+                    <div class="hot-score">Score: 93</div>
+                </div>
+                <div class="hot-tool">
+                    <a href="https://v0.dev" target="_blank">v0</a>
+                    <div class="hot-score">Score: 91</div>
+                </div>
+                <div class="hot-tool">
+                    <a href="https://elevenlabs.io" target="_blank">ElevenLabs</a>
+                    <div class="hot-score">Score: 91</div>
+                </div>
+                <div class="hot-tool">
+                    <a href="https://perplexity.ai" target="_blank">Perplexity</a>
+                    <div class="hot-score">Score: 91</div>
+                </div>
+                <div class="hot-tool">
+                    <a href="https://bolt.new" target="_blank">Bolt</a>
+                    <div class="hot-score">Score: 91</div>
+                </div>
+                <div class="hot-tool">
+                    <a href="https://blackforestlabs.ai" target="_blank">Flux</a>
+                    <div class="hot-score">Score: 89</div>
+                </div>
+                <div class="hot-tool">
+                    <a href="https://openai.com/operator" target="_blank">Operator</a>
+                    <div class="hot-score">Score: 89</div>
+                </div>
+                <div class="hot-tool">
+                    <a href="https://replit.com" target="_blank">Replit Agent</a>
+                    <div class="hot-score">Score: 89</div>
+                </div>
+
             </div>
         </div>
         
         <div class="categories">
-            
-            <!-- WRITING & CONTENT -->
             <div class="category" data-category="writing">
                 <div class="category-header">
                     <span class="category-icon">✍️</span>
                     <h2>Writing & Content</h2>
-                    <span class="category-count">15 tools</span>
+                    <span class="category-count">5 tools</span>
                 </div>
                 <div class="tools-grid">
-                    <div class="tool"><a href="https://jasper.ai" target="_blank">Jasper</a><div class="tool-desc">Enterprise AI content platform</div><span class="tool-tag">$49/mo</span></div>
-                    <div class="tool"><a href="https://copy.ai" target="_blank">Copy.ai</a><div class="tool-desc">AI copywriting and workflows</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://writer.com" target="_blank">Writer</a><div class="tool-desc">Enterprise content governance</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://writesonic.com" target="_blank">Writesonic</a><div class="tool-desc">AI writer with GPT-4</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://rytr.me" target="_blank">Rytr</a><div class="tool-desc">Budget AI writing assistant</div><span class="tool-tag">$9/mo</span></div>
-                    <div class="tool"><a href="https://anyword.com" target="_blank">Anyword</a><div class="tool-desc">Predictive performance scoring</div><span class="tool-tag">$49/mo</span></div>
-                    <div class="tool"><a href="https://hyperwriteai.com" target="_blank">HyperWrite</a><div class="tool-desc">Personal AI writing assistant</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://wordtune.com" target="_blank">Wordtune</a><div class="tool-desc">Rewrite and refine text</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://quillbot.com" target="_blank">QuillBot</a><div class="tool-desc">Paraphrasing and grammar</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://grammarly.com" target="_blank">Grammarly</a><div class="tool-desc">AI writing enhancement</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://notion.so/product/ai" target="_blank">Notion AI</a><div class="tool-desc">AI in your workspace</div><span class="tool-tag">$10/mo</span></div>
-                    <div class="tool"><a href="https://lex.page" target="_blank">Lex</a><div class="tool-desc">AI-first writing app</div><span class="tool-tag">$8/mo</span></div>
-                    <div class="tool"><a href="https://sudowrite.com" target="_blank">Sudowrite</a><div class="tool-desc">AI for fiction writers</div><span class="tool-tag">$19/mo</span></div>
-                    <div class="tool"><a href="https://novelai.net" target="_blank">NovelAI</a><div class="tool-desc">AI storytelling</div><span class="tool-tag">$15/mo</span></div>
-                    <div class="tool"><a href="https://shortlyai.com" target="_blank">ShortlyAI</a><div class="tool-desc">Long-form AI writing</div><span class="tool-tag">$79/mo</span></div>
+                    <div class="tool tool-hot">
+                        <a href="https://grammarly.com" target="_blank">Grammarly</a>
+                        <div class="tool-desc">AI writing enhancement</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">80</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://writer.com" target="_blank">Writer</a>
+                        <div class="tool-desc">Enterprise content AI</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Enterprise</span>
+                        </div>
+                        <span class="tool-score">75</span>
+                    </div>
+                    <div class="tool">
+                        <a href="https://jasper.ai" target="_blank">Jasper</a>
+                        <div class="tool-desc">Enterprise AI content platform</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">$49/mo</span>
+                        </div>
+                        <span class="tool-score">74</span>
+                    </div>
+                    <div class="tool">
+                        <a href="https://lex.page" target="_blank">Lex</a>
+                        <div class="tool-desc">AI-first writing app</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">$8/mo</span>
+                        </div>
+                        <span class="tool-score">72</span>
+                    </div>
+                    <div class="tool">
+                        <a href="https://wordtune.com" target="_blank">Wordtune</a>
+                        <div class="tool-desc">AI rewriting tool</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">72</span>
+                    </div>
                 </div>
             </div>
-            
-            <!-- IMAGE GENERATION -->
             <div class="category" data-category="image">
                 <div class="category-header">
                     <span class="category-icon">🎨</span>
                     <h2>Image Generation</h2>
-                    <span class="category-count">12 tools</span>
+                    <span class="category-count">7 tools</span>
                 </div>
                 <div class="tools-grid">
-                    <div class="tool"><a href="https://midjourney.com" target="_blank">Midjourney</a><div class="tool-desc">Premium AI art generation</div><span class="tool-tag">$10/mo</span></div>
-                    <div class="tool"><a href="https://openai.com/dall-e-3" target="_blank">DALL-E 3</a><div class="tool-desc">OpenAI's image model</div><span class="tool-tag">Pay per use</span></div>
-                    <div class="tool"><a href="https://stability.ai" target="_blank">Stable Diffusion</a><div class="tool-desc">Open source image AI</div><span class="tool-tag">Free/API</span></div>
-                    <div class="tool"><a href="https://leonardo.ai" target="_blank">Leonardo.ai</a><div class="tool-desc">Game asset generation</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://ideogram.ai" target="_blank">Ideogram</a><div class="tool-desc">Text-in-image specialist</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://playground.com" target="_blank">Playground</a><div class="tool-desc">Free AI image creation</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://canva.com/ai-image-generator" target="_blank">Canva AI</a><div class="tool-desc">AI in design platform</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://adobe.com/firefly" target="_blank">Adobe Firefly</a><div class="tool-desc">Commercial-safe AI images</div><span class="tool-tag">Included</span></div>
-                    <div class="tool"><a href="https://nightcafe.studio" target="_blank">NightCafe</a><div class="tool-desc">AI art community</div><span class="tool-tag">Credits</span></div>
-                    <div class="tool"><a href="https://clipdrop.co" target="_blank">ClipDrop</a><div class="tool-desc">AI image editing suite</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://getimg.ai" target="_blank">getimg.ai</a><div class="tool-desc">AI image tools suite</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://krea.ai" target="_blank">Krea AI</a><div class="tool-desc">Real-time AI generation</div><span class="tool-tag">Free tier</span></div>
+                    <div class="tool tool-hot">
+                        <a href="https://blackforestlabs.ai" target="_blank">Flux</a>
+                        <div class="tool-desc">State-of-the-art open image model</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free/API</span>
+                        </div>
+                        <span class="tool-score">89</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://ideogram.ai" target="_blank">Ideogram</a>
+                        <div class="tool-desc">Best text-in-image generation</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">87</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://midjourney.com" target="_blank">Midjourney</a>
+                        <div class="tool-desc">Premium AI art generation</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">$10/mo</span>
+                        </div>
+                        <span class="tool-score">85</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://recraft.ai" target="_blank">Recraft</a>
+                        <div class="tool-desc">AI design tool for vectors and images</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">85</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://openai.com/dall-e-3" target="_blank">DALL-E 3</a>
+                        <div class="tool-desc">OpenAI's latest image model</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Pay per use</span>
+                        </div>
+                        <span class="tool-score">83</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://krea.ai" target="_blank">Krea AI</a>
+                        <div class="tool-desc">Real-time AI image generation</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">82</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://leonardo.ai" target="_blank">Leonardo.ai</a>
+                        <div class="tool-desc">AI image generation for creatives</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">79</span>
+                    </div>
                 </div>
             </div>
-            
-            <!-- VIDEO -->
             <div class="category" data-category="video">
                 <div class="category-header">
                     <span class="category-icon">🎬</span>
                     <h2>Video Creation</h2>
-                    <span class="category-count">12 tools</span>
+                    <span class="category-count">9 tools</span>
                 </div>
                 <div class="tools-grid">
-                    <div class="tool"><a href="https://runwayml.com" target="_blank">Runway</a><div class="tool-desc">Gen-2 video generation</div><span class="tool-tag">$15/mo</span></div>
-                    <div class="tool"><a href="https://pika.art" target="_blank">Pika</a><div class="tool-desc">Text/image to video</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://kaiber.ai" target="_blank">Kaiber</a><div class="tool-desc">AI video for creators</div><span class="tool-tag">$10/mo</span></div>
-                    <div class="tool"><a href="https://synthesia.io" target="_blank">Synthesia</a><div class="tool-desc">AI avatar videos</div><span class="tool-tag">$30/mo</span></div>
-                    <div class="tool"><a href="https://heygen.com" target="_blank">HeyGen</a><div class="tool-desc">AI spokesperson videos</div><span class="tool-tag">$29/mo</span></div>
-                    <div class="tool"><a href="https://d-id.com" target="_blank">D-ID</a><div class="tool-desc">Talking avatar API</div><span class="tool-tag">$5.99/mo</span></div>
-                    <div class="tool"><a href="https://colossyan.com" target="_blank">Colossyan</a><div class="tool-desc">Enterprise AI videos</div><span class="tool-tag">$28/mo</span></div>
-                    <div class="tool"><a href="https://invideo.io/ai" target="_blank">InVideo AI</a><div class="tool-desc">Prompt to video</div><span class="tool-tag">$25/mo</span></div>
-                    <div class="tool"><a href="https://pictory.ai" target="_blank">Pictory</a><div class="tool-desc">Text to video clips</div><span class="tool-tag">$23/mo</span></div>
-                    <div class="tool"><a href="https://descript.com" target="_blank">Descript</a><div class="tool-desc">AI video/podcast editor</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://opus.pro" target="_blank">Opus Clip</a><div class="tool-desc">AI video repurposing</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://captions.ai" target="_blank">Captions</a><div class="tool-desc">AI-powered captions</div><span class="tool-tag">Free tier</span></div>
+                    <div class="tool tool-hot">
+                        <a href="https://runwayml.com" target="_blank">Runway</a>
+                        <div class="tool-desc">Gen-3 Alpha video generation</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">$15/mo</span>
+                        </div>
+                        <span class="tool-score">88</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://klingai.com" target="_blank">Kling AI</a>
+                        <div class="tool-desc">Long-form AI video generation</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">87</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://pika.art" target="_blank">Pika</a>
+                        <div class="tool-desc">AI video generation and editing</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">85</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://lumalabs.ai/dream-machine" target="_blank">Luma Dream Machine</a>
+                        <div class="tool-desc">High quality AI video from text</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">85</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://opus.pro" target="_blank">Opus Clip</a>
+                        <div class="tool-desc">AI video repurposing for shorts</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">83</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://descript.com" target="_blank">Descript</a>
+                        <div class="tool-desc">AI video/podcast editor with Overdub</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">82</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://heygen.com" target="_blank">HeyGen</a>
+                        <div class="tool-desc">AI avatar video creation</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">$29/mo</span>
+                        </div>
+                        <span class="tool-score">81</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://captions.ai" target="_blank">Captions</a>
+                        <div class="tool-desc">AI captions and video editing</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">80</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://synthesia.io" target="_blank">Synthesia</a>
+                        <div class="tool-desc">AI presenter videos</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">$30/mo</span>
+                        </div>
+                        <span class="tool-score">79</span>
+                    </div>
                 </div>
             </div>
-            
-            <!-- AUDIO & VOICE -->
             <div class="category" data-category="audio">
                 <div class="category-header">
                     <span class="category-icon">🎙️</span>
                     <h2>Audio & Voice</h2>
-                    <span class="category-count">10 tools</span>
+                    <span class="category-count">5 tools</span>
                 </div>
                 <div class="tools-grid">
-                    <div class="tool"><a href="https://elevenlabs.io" target="_blank">ElevenLabs</a><div class="tool-desc">Best-in-class voice AI</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://murf.ai" target="_blank">Murf</a><div class="tool-desc">AI voiceover studio</div><span class="tool-tag">$29/mo</span></div>
-                    <div class="tool"><a href="https://play.ht" target="_blank">Play.ht</a><div class="tool-desc">AI voice generator</div><span class="tool-tag">$39/mo</span></div>
-                    <div class="tool"><a href="https://resemble.ai" target="_blank">Resemble AI</a><div class="tool-desc">Voice cloning API</div><span class="tool-tag">$0.006/sec</span></div>
-                    <div class="tool"><a href="https://wellsaidlabs.com" target="_blank">WellSaid Labs</a><div class="tool-desc">Enterprise voice AI</div><span class="tool-tag">$49/mo</span></div>
-                    <div class="tool"><a href="https://speechify.com" target="_blank">Speechify</a><div class="tool-desc">Text-to-speech reader</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://suno.ai" target="_blank">Suno</a><div class="tool-desc">AI music generation</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://udio.com" target="_blank">Udio</a><div class="tool-desc">AI song creator</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://aiva.ai" target="_blank">AIVA</a><div class="tool-desc">AI music composition</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://soundraw.io" target="_blank">Soundraw</a><div class="tool-desc">Royalty-free AI music</div><span class="tool-tag">$16.99/mo</span></div>
+                    <div class="tool tool-hot">
+                        <a href="https://elevenlabs.io" target="_blank">ElevenLabs</a>
+                        <div class="tool-desc">Best-in-class voice AI and TTS</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">91</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://suno.ai" target="_blank">Suno</a>
+                        <div class="tool-desc">AI music generation</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">87</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://udio.com" target="_blank">Udio</a>
+                        <div class="tool-desc">AI song creation</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">85</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://play.ht" target="_blank">Play.ht</a>
+                        <div class="tool-desc">AI voice generator</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">$39/mo</span>
+                        </div>
+                        <span class="tool-score">77</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://resemble.ai" target="_blank">Resemble AI</a>
+                        <div class="tool-desc">Voice cloning API</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">$0.006/sec</span>
+                        </div>
+                        <span class="tool-score">76</span>
+                    </div>
                 </div>
             </div>
-            
-            <!-- CODING -->
             <div class="category" data-category="coding">
                 <div class="category-header">
                     <span class="category-icon">💻</span>
                     <h2>Coding & Development</h2>
-                    <span class="category-count">12 tools</span>
+                    <span class="category-count">9 tools</span>
                 </div>
                 <div class="tools-grid">
-                    <div class="tool"><a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a><div class="tool-desc">AI pair programmer</div><span class="tool-tag">$10/mo</span></div>
-                    <div class="tool"><a href="https://cursor.sh" target="_blank">Cursor</a><div class="tool-desc">AI-first code editor</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://replit.com/ai" target="_blank">Replit AI</a><div class="tool-desc">AI in browser IDE</div><span class="tool-tag">$25/mo</span></div>
-                    <div class="tool"><a href="https://codeium.com" target="_blank">Codeium</a><div class="tool-desc">Free AI code completion</div><span class="tool-tag">Free</span></div>
-                    <div class="tool"><a href="https://tabnine.com" target="_blank">Tabnine</a><div class="tool-desc">AI code assistant</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://sourcegraph.com/cody" target="_blank">Cody</a><div class="tool-desc">AI coding assistant</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://aws.amazon.com/codewhisperer" target="_blank">CodeWhisperer</a><div class="tool-desc">Amazon's code AI</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://continue.dev" target="_blank">Continue</a><div class="tool-desc">Open source copilot</div><span class="tool-tag">Free</span></div>
-                    <div class="tool"><a href="https://bolt.new" target="_blank">Bolt</a><div class="tool-desc">AI full-stack builder</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://v0.dev" target="_blank">v0</a><div class="tool-desc">AI UI generation</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://devin.ai" target="_blank">Devin</a><div class="tool-desc">AI software engineer</div><span class="tool-tag">$500/mo</span></div>
-                    <div class="tool"><a href="https://aider.chat" target="_blank">Aider</a><div class="tool-desc">AI pair programming CLI</div><span class="tool-tag">Free</span></div>
+                    <div class="tool tool-hot">
+                        <a href="https://cursor.sh" target="_blank">Cursor</a>
+                        <div class="tool-desc">AI-first code editor, built on VSCode</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">95</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://v0.dev" target="_blank">v0</a>
+                        <div class="tool-desc">AI UI generation by Vercel</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">91</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://bolt.new" target="_blank">Bolt</a>
+                        <div class="tool-desc">AI full-stack app builder in browser</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">91</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://replit.com" target="_blank">Replit Agent</a>
+                        <div class="tool-desc">AI agent that builds apps from prompts</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">$25/mo</span>
+                        </div>
+                        <span class="tool-score">89</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://codeium.com/windsurf" target="_blank">Windsurf</a>
+                        <div class="tool-desc">Agentic IDE by Codeium</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">88</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://lovable.dev" target="_blank">Lovable</a>
+                        <div class="tool-desc">AI app builder (formerly GPT Engineer)</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">87</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://devin.ai" target="_blank">Devin</a>
+                        <div class="tool-desc">Autonomous AI software engineer</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">$500/mo</span>
+                        </div>
+                        <span class="tool-score">85</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://aider.chat" target="_blank">Aider</a>
+                        <div class="tool-desc">AI pair programming in terminal</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free</span>
+                        </div>
+                        <span class="tool-score">85</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a>
+                        <div class="tool-desc">AI pair programmer</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">$10/mo</span>
+                        </div>
+                        <span class="tool-score">84</span>
+                    </div>
                 </div>
             </div>
-            
-            <!-- PRODUCTIVITY -->
             <div class="category" data-category="productivity">
                 <div class="category-header">
                     <span class="category-icon">⚡</span>
                     <h2>Productivity</h2>
-                    <span class="category-count">10 tools</span>
+                    <span class="category-count">8 tools</span>
                 </div>
                 <div class="tools-grid">
-                    <div class="tool"><a href="https://notion.so/product/ai" target="_blank">Notion AI</a><div class="tool-desc">AI workspace assistant</div><span class="tool-tag">$10/mo</span></div>
-                    <div class="tool"><a href="https://mem.ai" target="_blank">Mem</a><div class="tool-desc">AI-powered notes</div><span class="tool-tag">$15/mo</span></div>
-                    <div class="tool"><a href="https://taskade.com" target="_blank">Taskade</a><div class="tool-desc">AI project management</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://clickup.com/ai" target="_blank">ClickUp AI</a><div class="tool-desc">AI in project management</div><span class="tool-tag">$7/mo</span></div>
-                    <div class="tool"><a href="https://reclaim.ai" target="_blank">Reclaim.ai</a><div class="tool-desc">AI calendar management</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://otter.ai" target="_blank">Otter.ai</a><div class="tool-desc">AI meeting transcription</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://fireflies.ai" target="_blank">Fireflies.ai</a><div class="tool-desc">Meeting AI assistant</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://krisp.ai" target="_blank">Krisp</a><div class="tool-desc">AI noise cancellation</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://tldv.io" target="_blank">tl;dv</a><div class="tool-desc">AI meeting recorder</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://grain.com" target="_blank">Grain</a><div class="tool-desc">AI video highlights</div><span class="tool-tag">Free tier</span></div>
+                    <div class="tool tool-hot">
+                        <a href="https://granola.so" target="_blank">Granola</a>
+                        <div class="tool-desc">AI notepad for meetings</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">85</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://linear.app" target="_blank">Linear</a>
+                        <div class="tool-desc">AI-powered issue tracking</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">83</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://notion.so/product/ai" target="_blank">Notion AI</a>
+                        <div class="tool-desc">AI in your workspace</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">$10/mo</span>
+                        </div>
+                        <span class="tool-score">82</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://otter.ai" target="_blank">Otter.ai</a>
+                        <div class="tool-desc">AI meeting transcription</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">80</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://fireflies.ai" target="_blank">Fireflies.ai</a>
+                        <div class="tool-desc">AI meeting assistant</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">80</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://tldv.io" target="_blank">tl;dv</a>
+                        <div class="tool-desc">AI meeting recorder</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">77</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://reclaim.ai" target="_blank">Reclaim.ai</a>
+                        <div class="tool-desc">AI calendar management</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">77</span>
+                    </div>
+                    <div class="tool">
+                        <a href="https://mem.ai" target="_blank">Mem</a>
+                        <div class="tool-desc">AI-powered notes</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">$15/mo</span>
+                        </div>
+                        <span class="tool-score">74</span>
+                    </div>
                 </div>
             </div>
-            
-            <!-- RESEARCH -->
             <div class="category" data-category="research">
                 <div class="category-header">
                     <span class="category-icon">🔬</span>
                     <h2>Research & Analysis</h2>
-                    <span class="category-count">10 tools</span>
+                    <span class="category-count">6 tools</span>
                 </div>
                 <div class="tools-grid">
-                    <div class="tool"><a href="https://perplexity.ai" target="_blank">Perplexity</a><div class="tool-desc">AI-powered search</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://you.com" target="_blank">You.com</a><div class="tool-desc">AI search engine</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://elicit.com" target="_blank">Elicit</a><div class="tool-desc">AI research assistant</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://consensus.app" target="_blank">Consensus</a><div class="tool-desc">AI academic search</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://scite.ai" target="_blank">scite</a><div class="tool-desc">Smart citations</div><span class="tool-tag">$20/mo</span></div>
-                    <div class="tool"><a href="https://semanticscholar.org" target="_blank">Semantic Scholar</a><div class="tool-desc">AI research discovery</div><span class="tool-tag">Free</span></div>
-                    <div class="tool"><a href="https://chatpdf.com" target="_blank">ChatPDF</a><div class="tool-desc">Chat with PDFs</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://humata.ai" target="_blank">Humata</a><div class="tool-desc">AI document analysis</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://genei.io" target="_blank">Genei</a><div class="tool-desc">AI research summarizer</div><span class="tool-tag">$14.99/mo</span></div>
-                    <div class="tool"><a href="https://explainpaper.com" target="_blank">Explainpaper</a><div class="tool-desc">AI paper explainer</div><span class="tool-tag">Free</span></div>
+                    <div class="tool tool-hot">
+                        <a href="https://perplexity.ai" target="_blank">Perplexity</a>
+                        <div class="tool-desc">AI-powered search engine</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">91</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://notebooklm.google.com" target="_blank">NotebookLM</a>
+                        <div class="tool-desc">Google's AI research notebook</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free</span>
+                        </div>
+                        <span class="tool-score">88</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://exa.ai" target="_blank">Exa</a>
+                        <div class="tool-desc">Neural search API for AI apps</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">85</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://tavily.com" target="_blank">Tavily</a>
+                        <div class="tool-desc">Search API for AI agents</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">83</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://elicit.com" target="_blank">Elicit</a>
+                        <div class="tool-desc">AI research assistant</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">80</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://consensus.app" target="_blank">Consensus</a>
+                        <div class="tool-desc">AI search for scientific papers</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">77</span>
+                    </div>
                 </div>
             </div>
-            
-            <!-- MARKETING -->
             <div class="category" data-category="marketing">
                 <div class="category-header">
                     <span class="category-icon">📈</span>
                     <h2>Marketing</h2>
-                    <span class="category-count">10 tools</span>
+                    <span class="category-count">3 tools</span>
                 </div>
                 <div class="tools-grid">
-                    <div class="tool"><a href="https://jasper.ai" target="_blank">Jasper</a><div class="tool-desc">AI marketing platform</div><span class="tool-tag">$49/mo</span></div>
-                    <div class="tool"><a href="https://mutinyhq.com" target="_blank">Mutiny</a><div class="tool-desc">AI personalization</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://persado.com" target="_blank">Persado</a><div class="tool-desc">AI language optimization</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://phrasee.co" target="_blank">Phrasee</a><div class="tool-desc">AI marketing copy</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://albert.ai" target="_blank">Albert</a><div class="tool-desc">AI ad optimization</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://adcreative.ai" target="_blank">AdCreative.ai</a><div class="tool-desc">AI ad generation</div><span class="tool-tag">$29/mo</span></div>
-                    <div class="tool"><a href="https://pencil.li" target="_blank">Pencil</a><div class="tool-desc">AI ad creative</div><span class="tool-tag">$119/mo</span></div>
-                    <div class="tool"><a href="https://predis.ai" target="_blank">Predis.ai</a><div class="tool-desc">AI social content</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://smartly.io" target="_blank">Smartly.io</a><div class="tool-desc">AI ad automation</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://typeface.ai" target="_blank">Typeface</a><div class="tool-desc">Enterprise content AI</div><span class="tool-tag">Enterprise</span></div>
+                    <div class="tool tool-hot">
+                        <a href="https://typeface.ai" target="_blank">Typeface</a>
+                        <div class="tool-desc">Enterprise content AI</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Enterprise</span>
+                        </div>
+                        <span class="tool-score">78</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://adcreative.ai" target="_blank">AdCreative.ai</a>
+                        <div class="tool-desc">AI ad generation</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">$29/mo</span>
+                        </div>
+                        <span class="tool-score">76</span>
+                    </div>
+                    <div class="tool">
+                        <a href="https://pencil.li" target="_blank">Pencil</a>
+                        <div class="tool-desc">AI ad creative</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">$119/mo</span>
+                        </div>
+                        <span class="tool-score">73</span>
+                    </div>
                 </div>
             </div>
-            
-            <!-- DESIGN -->
             <div class="category" data-category="design">
                 <div class="category-header">
                     <span class="category-icon">🎯</span>
                     <h2>Design</h2>
-                    <span class="category-count">10 tools</span>
+                    <span class="category-count">5 tools</span>
                 </div>
                 <div class="tools-grid">
-                    <div class="tool"><a href="https://canva.com" target="_blank">Canva</a><div class="tool-desc">AI-powered design</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://figma.com" target="_blank">Figma AI</a><div class="tool-desc">AI design features</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://framer.com/ai" target="_blank">Framer AI</a><div class="tool-desc">AI website builder</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://uizard.io" target="_blank">Uizard</a><div class="tool-desc">AI UI design</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://looka.com" target="_blank">Looka</a><div class="tool-desc">AI logo maker</div><span class="tool-tag">$20+</span></div>
-                    <div class="tool"><a href="https://brandmark.io" target="_blank">Brandmark</a><div class="tool-desc">AI brand identity</div><span class="tool-tag">$25+</span></div>
-                    <div class="tool"><a href="https://designs.ai" target="_blank">Designs.ai</a><div class="tool-desc">AI design suite</div><span class="tool-tag">$29/mo</span></div>
-                    <div class="tool"><a href="https://khroma.co" target="_blank">Khroma</a><div class="tool-desc">AI color palettes</div><span class="tool-tag">Free</span></div>
-                    <div class="tool"><a href="https://magician.design" target="_blank">Magician</a><div class="tool-desc">AI for Figma</div><span class="tool-tag">$5/mo</span></div>
-                    <div class="tool"><a href="https://galileo.ai" target="_blank">Galileo AI</a><div class="tool-desc">AI UI generation</div><span class="tool-tag">Waitlist</span></div>
+                    <div class="tool tool-hot">
+                        <a href="https://framer.com" target="_blank">Framer</a>
+                        <div class="tool-desc">AI website builder</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">86</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://figma.com" target="_blank">Figma AI</a>
+                        <div class="tool-desc">AI features in Figma</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">84</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://canva.com" target="_blank">Canva</a>
+                        <div class="tool-desc">AI-powered design platform</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">82</span>
+                    </div>
+                    <div class="tool">
+                        <a href="https://uizard.io" target="_blank">Uizard</a>
+                        <div class="tool-desc">AI UI design</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">74</span>
+                    </div>
+                    <div class="tool">
+                        <a href="https://magician.design" target="_blank">Magician</a>
+                        <div class="tool-desc">AI for Figma</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">$5/mo</span>
+                        </div>
+                        <span class="tool-score">72</span>
+                    </div>
                 </div>
             </div>
-            
-            <!-- SALES -->
             <div class="category" data-category="sales">
                 <div class="category-header">
                     <span class="category-icon">💰</span>
                     <h2>Sales</h2>
-                    <span class="category-count">10 tools</span>
+                    <span class="category-count">4 tools</span>
                 </div>
                 <div class="tools-grid">
-                    <div class="tool"><a href="https://gong.io" target="_blank">Gong</a><div class="tool-desc">Revenue intelligence</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://chorus.ai" target="_blank">Chorus</a><div class="tool-desc">Conversation intelligence</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://clari.com" target="_blank">Clari</a><div class="tool-desc">Revenue platform</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://outreach.io" target="_blank">Outreach</a><div class="tool-desc">Sales engagement</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://salesloft.com" target="_blank">Salesloft</a><div class="tool-desc">Sales engagement</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://apollo.io" target="_blank">Apollo</a><div class="tool-desc">Sales intelligence</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://lavender.ai" target="_blank">Lavender</a><div class="tool-desc">AI email coach</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://regie.ai" target="_blank">Regie.ai</a><div class="tool-desc">AI sales content</div><span class="tool-tag">$59/mo</span></div>
-                    <div class="tool"><a href="https://seamless.ai" target="_blank">Seamless.AI</a><div class="tool-desc">Lead generation</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://clay.com" target="_blank">Clay</a><div class="tool-desc">Data enrichment</div><span class="tool-tag">Free tier</span></div>
+                    <div class="tool tool-hot">
+                        <a href="https://apollo.io" target="_blank">Apollo</a>
+                        <div class="tool-desc">Sales intelligence</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">81</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://gong.io" target="_blank">Gong</a>
+                        <div class="tool-desc">Revenue intelligence platform</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Enterprise</span>
+                        </div>
+                        <span class="tool-score">78</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://lavender.ai" target="_blank">Lavender</a>
+                        <div class="tool-desc">AI email coach</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">76</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://outreach.io" target="_blank">Outreach</a>
+                        <div class="tool-desc">Sales engagement platform</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Enterprise</span>
+                        </div>
+                        <span class="tool-score">75</span>
+                    </div>
                 </div>
             </div>
-            
-            <!-- CUSTOMER SUPPORT -->
             <div class="category" data-category="support">
                 <div class="category-header">
                     <span class="category-icon">💬</span>
                     <h2>Customer Support</h2>
-                    <span class="category-count">10 tools</span>
+                    <span class="category-count">3 tools</span>
                 </div>
                 <div class="tools-grid">
-                    <div class="tool"><a href="https://intercom.com/fin" target="_blank">Intercom Fin</a><div class="tool-desc">AI customer service</div><span class="tool-tag">$0.99/resolution</span></div>
-                    <div class="tool"><a href="https://zendesk.com/ai" target="_blank">Zendesk AI</a><div class="tool-desc">AI support agents</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://ada.cx" target="_blank">Ada</a><div class="tool-desc">AI customer service</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://forethought.ai" target="_blank">Forethought</a><div class="tool-desc">AI support automation</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://kustomer.com" target="_blank">Kustomer</a><div class="tool-desc">AI CRM platform</div><span class="tool-tag">$89/mo</span></div>
-                    <div class="tool"><a href="https://tidio.com" target="_blank">Tidio</a><div class="tool-desc">AI chatbots</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://drift.com" target="_blank">Drift</a><div class="tool-desc">Conversational AI</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://freshdesk.com" target="_blank">Freshdesk Freddy</a><div class="tool-desc">AI helpdesk</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://ultimate.ai" target="_blank">Ultimate</a><div class="tool-desc">AI automation</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://tawk.to" target="_blank">tawk.to AI</a><div class="tool-desc">Free live chat + AI</div><span class="tool-tag">Free</span></div>
+                    <div class="tool tool-hot">
+                        <a href="https://intercom.com/fin" target="_blank">Intercom Fin</a>
+                        <div class="tool-desc">AI customer service agent</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">$0.99/resolution</span>
+                        </div>
+                        <span class="tool-score">85</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://chatbase.co" target="_blank">Chatbase</a>
+                        <div class="tool-desc">Custom GPT chatbots</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">79</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://tidio.com" target="_blank">Tidio</a>
+                        <div class="tool-desc">AI chatbots for support</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">77</span>
+                    </div>
                 </div>
             </div>
-            
-            <!-- DATA & ANALYTICS -->
             <div class="category" data-category="data">
                 <div class="category-header">
                     <span class="category-icon">📊</span>
                     <h2>Data & Analytics</h2>
-                    <span class="category-count">10 tools</span>
+                    <span class="category-count">3 tools</span>
                 </div>
                 <div class="tools-grid">
-                    <div class="tool"><a href="https://hex.tech" target="_blank">Hex</a><div class="tool-desc">AI data workspace</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://julius.ai" target="_blank">Julius</a><div class="tool-desc">AI data analyst</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://obviously.ai" target="_blank">Obviously AI</a><div class="tool-desc">No-code ML</div><span class="tool-tag">$75/mo</span></div>
-                    <div class="tool"><a href="https://akkio.com" target="_blank">Akkio</a><div class="tool-desc">AI for analysts</div><span class="tool-tag">$50/mo</span></div>
-                    <div class="tool"><a href="https://polymer.app" target="_blank">Polymer</a><div class="tool-desc">AI data visualization</div><span class="tool-tag">$20/mo</span></div>
-                    <div class="tool"><a href="https://powerdrill.ai" target="_blank">Powerdrill</a><div class="tool-desc">AI data analysis</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://datarails.com" target="_blank">Datarails</a><div class="tool-desc">AI for finance</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://domo.com" target="_blank">Domo AI</a><div class="tool-desc">AI business intelligence</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://thoughtspot.com" target="_blank">ThoughtSpot</a><div class="tool-desc">AI analytics</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://sisense.com" target="_blank">Sisense</a><div class="tool-desc">AI-driven analytics</div><span class="tool-tag">Enterprise</span></div>
+                    <div class="tool tool-hot">
+                        <a href="https://julius.ai" target="_blank">Julius</a>
+                        <div class="tool-desc">AI data analyst</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">85</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://hex.tech" target="_blank">Hex</a>
+                        <div class="tool-desc">AI data workspace</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">83</span>
+                    </div>
+                    <div class="tool">
+                        <a href="https://akkio.com" target="_blank">Akkio</a>
+                        <div class="tool-desc">AI for analysts</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">$50/mo</span>
+                        </div>
+                        <span class="tool-score">74</span>
+                    </div>
                 </div>
             </div>
-            
-            <!-- HR & RECRUITING -->
-            <div class="category" data-category="hr">
-                <div class="category-header">
-                    <span class="category-icon">👥</span>
-                    <h2>HR & Recruiting</h2>
-                    <span class="category-count">10 tools</span>
-                </div>
-                <div class="tools-grid">
-                    <div class="tool"><a href="https://linkedin.com/talent/recruiter" target="_blank">LinkedIn Recruiter</a><div class="tool-desc">AI hiring platform</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://hirevue.com" target="_blank">HireVue</a><div class="tool-desc">AI video interviews</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://eightfold.ai" target="_blank">Eightfold</a><div class="tool-desc">AI talent intelligence</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://paradox.ai" target="_blank">Paradox</a><div class="tool-desc">AI recruiting assistant</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://beamery.com" target="_blank">Beamery</a><div class="tool-desc">AI talent lifecycle</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://seekout.com" target="_blank">SeekOut</a><div class="tool-desc">AI talent sourcing</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://textio.com" target="_blank">Textio</a><div class="tool-desc">AI writing for hiring</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://fetcher.ai" target="_blank">Fetcher</a><div class="tool-desc">AI sourcing</div><span class="tool-tag">$149/mo</span></div>
-                    <div class="tool"><a href="https://manatal.com" target="_blank">Manatal</a><div class="tool-desc">AI recruitment</div><span class="tool-tag">$15/mo</span></div>
-                    <div class="tool"><a href="https://dover.com" target="_blank">Dover</a><div class="tool-desc">AI recruiting</div><span class="tool-tag">Free tier</span></div>
-                </div>
-            </div>
-            
-            <!-- LEGAL -->
             <div class="category" data-category="legal">
                 <div class="category-header">
                     <span class="category-icon">⚖️</span>
                     <h2>Legal</h2>
-                    <span class="category-count">8 tools</span>
+                    <span class="category-count">2 tools</span>
                 </div>
                 <div class="tools-grid">
-                    <div class="tool"><a href="https://harvey.ai" target="_blank">Harvey</a><div class="tool-desc">AI for lawyers</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://casetext.com" target="_blank">CoCounsel</a><div class="tool-desc">AI legal assistant</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://spellbook.legal" target="_blank">Spellbook</a><div class="tool-desc">AI contract drafting</div><span class="tool-tag">$99/mo</span></div>
-                    <div class="tool"><a href="https://legalrobot.com" target="_blank">Legal Robot</a><div class="tool-desc">AI contract analysis</div><span class="tool-tag">$19/mo</span></div>
-                    <div class="tool"><a href="https://ironclad.com" target="_blank">Ironclad</a><div class="tool-desc">AI contract lifecycle</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://luminance.com" target="_blank">Luminance</a><div class="tool-desc">AI for legal docs</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://lexion.ai" target="_blank">Lexion</a><div class="tool-desc">AI contract management</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://donotpay.com" target="_blank">DoNotPay</a><div class="tool-desc">AI consumer lawyer</div><span class="tool-tag">$36/3mo</span></div>
+                    <div class="tool tool-hot">
+                        <a href="https://harvey.ai" target="_blank">Harvey</a>
+                        <div class="tool-desc">AI for lawyers</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Enterprise</span>
+                        </div>
+                        <span class="tool-score">84</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://spellbook.legal" target="_blank">Spellbook</a>
+                        <div class="tool-desc">AI contract drafting</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">$99/mo</span>
+                        </div>
+                        <span class="tool-score">76</span>
+                    </div>
                 </div>
             </div>
-            
-            <!-- FINANCE -->
             <div class="category" data-category="finance">
                 <div class="category-header">
                     <span class="category-icon">💳</span>
                     <h2>Finance</h2>
-                    <span class="category-count">8 tools</span>
+                    <span class="category-count">2 tools</span>
                 </div>
                 <div class="tools-grid">
-                    <div class="tool"><a href="https://vic.ai" target="_blank">Vic.ai</a><div class="tool-desc">AI accounts payable</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://truewind.ai" target="_blank">Truewind</a><div class="tool-desc">AI bookkeeping</div><span class="tool-tag">$500/mo</span></div>
-                    <div class="tool"><a href="https://ramp.com" target="_blank">Ramp</a><div class="tool-desc">AI expense management</div><span class="tool-tag">Free</span></div>
-                    <div class="tool"><a href="https://brex.com" target="_blank">Brex</a><div class="tool-desc">AI spend management</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://puzzle.io" target="_blank">Puzzle</a><div class="tool-desc">AI accounting</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://docyt.com" target="_blank">Docyt</a><div class="tool-desc">AI bookkeeping</div><span class="tool-tag">$99/mo</span></div>
-                    <div class="tool"><a href="https://stampli.com" target="_blank">Stampli</a><div class="tool-desc">AI invoice processing</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://zeni.ai" target="_blank">Zeni</a><div class="tool-desc">AI finance team</div><span class="tool-tag">$549/mo</span></div>
+                    <div class="tool tool-hot">
+                        <a href="https://ramp.com" target="_blank">Ramp</a>
+                        <div class="tool-desc">AI expense management</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free</span>
+                        </div>
+                        <span class="tool-score">82</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://brex.com" target="_blank">Brex</a>
+                        <div class="tool-desc">AI spend management</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">80</span>
+                    </div>
                 </div>
             </div>
-            
-            <!-- CHATBOTS / AGENTS -->
             <div class="category" data-category="agents">
                 <div class="category-header">
                     <span class="category-icon">🤖</span>
                     <h2>AI Agents & Chatbots</h2>
-                    <span class="category-count">10 tools</span>
+                    <span class="category-count">8 tools</span>
                 </div>
                 <div class="tools-grid">
-                    <div class="tool"><a href="https://chat.openai.com" target="_blank">ChatGPT</a><div class="tool-desc">OpenAI's assistant</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://claude.ai" target="_blank">Claude</a><div class="tool-desc">Anthropic's assistant</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://gemini.google.com" target="_blank">Gemini</a><div class="tool-desc">Google's assistant</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://poe.com" target="_blank">Poe</a><div class="tool-desc">Multi-model chat</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://character.ai" target="_blank">Character.AI</a><div class="tool-desc">AI personas</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://botpress.com" target="_blank">Botpress</a><div class="tool-desc">Chatbot builder</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://voiceflow.com" target="_blank">Voiceflow</a><div class="tool-desc">Conversation design</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://landbot.io" target="_blank">Landbot</a><div class="tool-desc">No-code chatbots</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://chatbase.co" target="_blank">Chatbase</a><div class="tool-desc">Custom GPT chatbots</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://customgpt.ai" target="_blank">CustomGPT</a><div class="tool-desc">Business chatbots</div><span class="tool-tag">$89/mo</span></div>
+                    <div class="tool tool-hot">
+                        <a href="https://claude.ai" target="_blank">Claude</a>
+                        <div class="tool-desc">Anthropic's AI assistant</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">97</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
+                        <div class="tool-desc">OpenAI's conversational AI</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">93</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://openai.com/operator" target="_blank">Operator</a>
+                        <div class="tool-desc">OpenAI's web agent</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">ChatGPT Pro</span>
+                        </div>
+                        <span class="tool-score">89</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://gemini.google.com" target="_blank">Gemini</a>
+                        <div class="tool-desc">Google's AI assistant</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">88</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://x.ai" target="_blank">Grok</a>
+                        <div class="tool-desc">xAI's conversational AI</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">X Premium</span>
+                        </div>
+                        <span class="tool-score">84</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://multion.ai" target="_blank">MultiOn</a>
+                        <div class="tool-desc">AI web agent</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Beta</span>
+                        </div>
+                        <span class="tool-score">83</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://poe.com" target="_blank">Poe</a>
+                        <div class="tool-desc">Multi-model AI chat</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">80</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://character.ai" target="_blank">Character.AI</a>
+                        <div class="tool-desc">AI personas and characters</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">78</span>
+                    </div>
                 </div>
             </div>
-            
-            <!-- AUTOMATION -->
             <div class="category" data-category="automation">
                 <div class="category-header">
                     <span class="category-icon">🔄</span>
                     <h2>Automation</h2>
-                    <span class="category-count">10 tools</span>
+                    <span class="category-count">6 tools</span>
                 </div>
                 <div class="tools-grid">
-                    <div class="tool"><a href="https://zapier.com/ai" target="_blank">Zapier AI</a><div class="tool-desc">AI workflow automation</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://make.com" target="_blank">Make</a><div class="tool-desc">Visual automation</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://bardeen.ai" target="_blank">Bardeen</a><div class="tool-desc">AI browser automation</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://browse.ai" target="_blank">Browse AI</a><div class="tool-desc">AI web scraping</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://axiom.ai" target="_blank">Axiom</a><div class="tool-desc">Browser automation</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://n8n.io" target="_blank">n8n</a><div class="tool-desc">Open source automation</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://activepieces.com" target="_blank">Activepieces</a><div class="tool-desc">Open source Zapier</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://relevanceai.com" target="_blank">Relevance AI</a><div class="tool-desc">AI agent builder</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://tray.io" target="_blank">Tray.io</a><div class="tool-desc">Enterprise automation</div><span class="tool-tag">Enterprise</span></div>
-                    <div class="tool"><a href="https://workato.com" target="_blank">Workato</a><div class="tool-desc">Enterprise iPaaS</div><span class="tool-tag">Enterprise</span></div>
+                    <div class="tool tool-hot">
+                        <a href="https://clay.com" target="_blank">Clay</a>
+                        <div class="tool-desc">AI data enrichment and outreach</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">87</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://n8n.io" target="_blank">n8n</a>
+                        <div class="tool-desc">Open source workflow automation</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">86</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://browserbase.com" target="_blank">Browserbase</a>
+                        <div class="tool-desc">Headless browser infrastructure for AI</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">86</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://zapier.com/ai" target="_blank">Zapier AI</a>
+                        <div class="tool-desc">AI workflow automation</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">82</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://make.com" target="_blank">Make</a>
+                        <div class="tool-desc">Visual automation platform</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">81</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://bardeen.ai" target="_blank">Bardeen</a>
+                        <div class="tool-desc">AI browser automation</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">80</span>
+                    </div>
                 </div>
             </div>
-            
-            <!-- SOCIAL MEDIA -->
             <div class="category" data-category="social">
                 <div class="category-header">
                     <span class="category-icon">📱</span>
                     <h2>Social Media</h2>
-                    <span class="category-count">10 tools</span>
+                    <span class="category-count">3 tools</span>
                 </div>
                 <div class="tools-grid">
-                    <div class="tool"><a href="https://buffer.com" target="_blank">Buffer</a><div class="tool-desc">AI social scheduling</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://hootsuite.com" target="_blank">Hootsuite</a><div class="tool-desc">Social management</div><span class="tool-tag">$99/mo</span></div>
-                    <div class="tool"><a href="https://sproutsocial.com" target="_blank">Sprout Social</a><div class="tool-desc">Social suite</div><span class="tool-tag">$249/mo</span></div>
-                    <div class="tool"><a href="https://lately.ai" target="_blank">Lately</a><div class="tool-desc">AI content repurposing</div><span class="tool-tag">$49/mo</span></div>
-                    <div class="tool"><a href="https://ocoya.com" target="_blank">Ocoya</a><div class="tool-desc">AI social content</div><span class="tool-tag">$19/mo</span></div>
-                    <div class="tool"><a href="https://publer.io" target="_blank">Publer</a><div class="tool-desc">Social scheduling</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://socialbee.com" target="_blank">SocialBee</a><div class="tool-desc">AI social management</div><span class="tool-tag">$29/mo</span></div>
-                    <div class="tool"><a href="https://taplio.com" target="_blank">Taplio</a><div class="tool-desc">AI for LinkedIn</div><span class="tool-tag">$49/mo</span></div>
-                    <div class="tool"><a href="https://tweethunter.io" target="_blank">Tweet Hunter</a><div class="tool-desc">AI for Twitter</div><span class="tool-tag">$49/mo</span></div>
-                    <div class="tool"><a href="https://tribescaler.com" target="_blank">Tribescaler</a><div class="tool-desc">AI hook generator</div><span class="tool-tag">$19/mo</span></div>
+                    <div class="tool tool-hot">
+                        <a href="https://buffer.com" target="_blank">Buffer</a>
+                        <div class="tool-desc">AI social scheduling</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">77</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://taplio.com" target="_blank">Taplio</a>
+                        <div class="tool-desc">AI for LinkedIn growth</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">$49/mo</span>
+                        </div>
+                        <span class="tool-score">76</span>
+                    </div>
+                    <div class="tool">
+                        <a href="https://tweethunter.io" target="_blank">Tweet Hunter</a>
+                        <div class="tool-desc">AI for X/Twitter growth</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">$49/mo</span>
+                        </div>
+                        <span class="tool-score">74</span>
+                    </div>
                 </div>
             </div>
-            
-            <!-- EDUCATION -->
             <div class="category" data-category="education">
                 <div class="category-header">
                     <span class="category-icon">🎓</span>
                     <h2>Education</h2>
-                    <span class="category-count">8 tools</span>
+                    <span class="category-count">2 tools</span>
                 </div>
                 <div class="tools-grid">
-                    <div class="tool"><a href="https://duolingo.com" target="_blank">Duolingo</a><div class="tool-desc">AI language learning</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://khanmigo.ai" target="_blank">Khanmigo</a><div class="tool-desc">AI tutor</div><span class="tool-tag">$9/mo</span></div>
-                    <div class="tool"><a href="https://quizlet.com" target="_blank">Quizlet</a><div class="tool-desc">AI study tools</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://synthesis.com/tutor" target="_blank">Synthesis Tutor</a><div class="tool-desc">AI math tutor</div><span class="tool-tag">$99/mo</span></div>
-                    <div class="tool"><a href="https://photomath.com" target="_blank">Photomath</a><div class="tool-desc">AI math solver</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://socratic.org" target="_blank">Socratic</a><div class="tool-desc">AI homework help</div><span class="tool-tag">Free</span></div>
-                    <div class="tool"><a href="https://grammarly.com/edu" target="_blank">Grammarly EDU</a><div class="tool-desc">AI writing for students</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://speechify.com" target="_blank">Speechify</a><div class="tool-desc">AI text reader</div><span class="tool-tag">Free tier</span></div>
+                    <div class="tool tool-hot">
+                        <a href="https://duolingo.com" target="_blank">Duolingo</a>
+                        <div class="tool-desc">AI language learning</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">82</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://khanmigo.ai" target="_blank">Khanmigo</a>
+                        <div class="tool-desc">AI tutor by Khan Academy</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">$9/mo</span>
+                        </div>
+                        <span class="tool-score">79</span>
+                    </div>
                 </div>
             </div>
-            
-            <!-- 3D & GAME DEV -->
             <div class="category" data-category="3d">
                 <div class="category-header">
                     <span class="category-icon">🎮</span>
                     <h2>3D & Game Dev</h2>
-                    <span class="category-count">7 tools</span>
+                    <span class="category-count">3 tools</span>
                 </div>
                 <div class="tools-grid">
-                    <div class="tool"><a href="https://meshy.ai" target="_blank">Meshy</a><div class="tool-desc">AI 3D model generation</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://luma.ai" target="_blank">Luma AI</a><div class="tool-desc">3D capture and video</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://kaedim3d.com" target="_blank">Kaedim</a><div class="tool-desc">Image to 3D</div><span class="tool-tag">$149/mo</span></div>
-                    <div class="tool"><a href="https://scenario.com" target="_blank">Scenario</a><div class="tool-desc">AI game assets</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://spline.design/ai" target="_blank">Spline AI</a><div class="tool-desc">AI 3D design</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://blockadelabs.com" target="_blank">Blockade Labs</a><div class="tool-desc">AI skyboxes</div><span class="tool-tag">Free tier</span></div>
-                    <div class="tool"><a href="https://masterpiece.ai" target="_blank">Masterpiece</a><div class="tool-desc">AI 3D creation</div><span class="tool-tag">Free tier</span></div>
+                    <div class="tool tool-hot">
+                        <a href="https://meshy.ai" target="_blank">Meshy</a>
+                        <div class="tool-desc">AI 3D model generation</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">84</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://tripo3d.ai" target="_blank">Tripo AI</a>
+                        <div class="tool-desc">Image to 3D model</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">84</span>
+                    </div>
+                    <div class="tool tool-hot">
+                        <a href="https://lumalabs.ai" target="_blank">Luma AI</a>
+                        <div class="tool-desc">3D capture and generation</div>
+                        <div class="tool-meta">
+                            <span class="tool-tag">Free tier</span>
+                        </div>
+                        <span class="tool-score">80</span>
+                    </div>
                 </div>
             </div>
-            
+
         </div>
     </main>
     
     <footer>
         <div class="container">
             <p>Curated by <a href="https://thebuilderweekly.substack.com" target="_blank">The Builder Weekly</a></p>
-            <p style="margin-top: 12px; font-size: 0.85rem;">Follow us on <a href="https://instagram.com/thebuildrweekly" target="_blank">Instagram</a> • <a href="https://x.com/thebuildrweekly" target="_blank">X</a> • <a href="https://youtube.com/@thebuilderweekly" target="_blank">YouTube</a></p>
+            <p style="margin-top: 12px; font-size: 0.85rem;">
+                <a href="https://instagram.com/thebuildrweekly" target="_blank">Instagram</a> · 
+                <a href="https://x.com/thebuildrweekly" target="_blank">X</a> · 
+                <a href="https://youtube.com/@thebuilderweekly" target="_blank">YouTube</a>
+            </p>
+            <div class="graveyard-link">
+                <a href="graveyard.html">View the Graveyard</a> (2 tools that didn't make it)
+            </div>
         </div>
     </footer>
     
     <script>
         const search = document.getElementById('search');
-        const tools = document.querySelectorAll('.tool');
         const categories = document.querySelectorAll('.category');
-        
         search.addEventListener('input', (e) => {
             const q = e.target.value.toLowerCase();
-            
             categories.forEach(cat => {
                 let visible = 0;
                 cat.querySelectorAll('.tool').forEach(tool => {
-                    const text = tool.textContent.toLowerCase();
-                    if (text.includes(q)) {
-                        tool.classList.remove('hidden');
-                        visible++;
-                    } else {
-                        tool.classList.add('hidden');
-                    }
+                    const match = tool.textContent.toLowerCase().includes(q);
+                    tool.classList.toggle('hidden', !match);
+                    if (match) visible++;
                 });
                 cat.classList.toggle('hidden', visible === 0);
             });
