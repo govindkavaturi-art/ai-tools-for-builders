@@ -134,10 +134,10 @@ def generate_elite_html():
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Insider's AI Stack | The Builder Weekly</title>
-    <meta name="description" content="{tool_count} tools. Zero filler. The AI stack for builders who ship.">
-    <meta property="og:title" content="The Insider's AI Stack">
-    <meta property="og:description" content="{tool_count} curated AI tools. Updated daily. No pay-to-play.">
+    <title>Top AI Tools of 2026 | The Builder Weekly</title>
+    <meta name="description" content="Top AI tools of 2026. Curated daily, autonomously by AI.">
+    <meta property="og:title" content="Top AI Tools of 2026">
+    <meta property="og:description" content="{tool_count} AI tools curated daily, autonomously by AI.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -714,8 +714,8 @@ def generate_elite_html():
     <header>
         <div class="container">
             <div class="eyebrow">The Builder Weekly Presents</div>
-            <h1><span>The Insider's AI Stack</span></h1>
-            <p class="subtitle">{tool_count} tools. Zero filler. Scored by real activity, not ads. Updated daily.</p>
+            <h1><span>Top AI Tools of 2026</span></h1>
+            <p class="subtitle">Curated daily, autonomously by AI.</p>
             
             <div class="stats-row">
                 <div class="stat">
