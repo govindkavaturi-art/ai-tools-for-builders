@@ -144,12 +144,12 @@ def generate_elite_html():
         :root {{
             --yellow: #FFF67F;
             --yellow-dim: #FFF67F22;
-            --bg: #050505;
-            --bg-card: #0a0a0a;
-            --bg-elevated: #111;
+            --bg: #000000;
+            --bg-card: #141414;
+            --bg-elevated: #1a1a1a;
             --text: #e5e5e5;
-            --text-dim: #666;
-            --border: #1a1a1a;
+            --text-dim: #777;
+            --border: #2a2a2a;
             --glow: rgba(255, 246, 127, 0.15);
         }}
         
@@ -282,12 +282,12 @@ def generate_elite_html():
             padding: 10px 14px;
             font-size: 0.85rem;
             font-family: inherit;
-            border: 1px solid #252525;
+            border: 1px solid #2a2a2a;
             border-radius: 8px;
-            background: linear-gradient(145deg, #141414 0%, #0c0c0c 100%);
+            background: #161616;
             color: var(--text);
             transition: all 0.3s ease;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.03);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.6);
         }}
         
         #search:focus {{
@@ -319,9 +319,8 @@ def generate_elite_html():
         }}
         
         .bento-card {{
-            background: linear-gradient(145deg, #151515 0%, #0f0f0f 100%);
-            border: 1px solid #252525;
-            border-top-color: #333;
+            background: #161616;
+            border: 1px solid #2a2a2a;
             border-radius: 10px;
             padding: 14px;
             text-decoration: none;
@@ -334,7 +333,7 @@ def generate_elite_html():
             transition: all 0.3s ease;
             transform-style: preserve-3d;
             min-height: 90px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.7), 0 2px 8px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
         }}
         
         .bento-large {{
@@ -477,16 +476,15 @@ def generate_elite_html():
         }}
         
         .tool-card {{
-            background: linear-gradient(145deg, #151515 0%, #0f0f0f 100%);
-            border: 1px solid #252525;
-            border-top-color: #333;
+            background: #161616;
+            border: 1px solid #2a2a2a;
             border-radius: 8px;
             padding: 10px 12px;
             text-decoration: none;
             color: var(--text);
             transition: all 0.2s ease;
             display: block;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.05);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.7);
         }}
         
         .tool-card:hover {{
@@ -566,12 +564,12 @@ def generate_elite_html():
         }}
         
         .grave-card {{
-            background: linear-gradient(145deg, #121212 0%, #0a0a0a 100%);
-            border: 1px solid #1a1a1a;
+            background: #111;
+            border: 1px solid #222;
             border-radius: 8px;
             padding: 12px;
             opacity: 0.7;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.5);
         }}
         
         .grave-name {{
@@ -606,13 +604,12 @@ def generate_elite_html():
         }}
         
         .curate-card {{
-            background: linear-gradient(145deg, #151515 0%, #0f0f0f 100%);
-            border: 1px solid #252525;
-            border-top-color: #333;
+            background: #161616;
+            border: 1px solid #2a2a2a;
             border-radius: 12px;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
         }}
         
         .curate-icon {{
