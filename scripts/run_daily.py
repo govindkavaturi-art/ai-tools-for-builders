@@ -13,7 +13,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from scanner import run_scan
 from scorer import score_all_tools
-from generator import generate_html
+from generator_elite import generate_elite_html as generate_html
 from publisher import git_push
 
 def run_daily_update():

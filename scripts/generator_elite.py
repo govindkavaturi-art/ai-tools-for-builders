@@ -139,7 +139,7 @@ def generate_elite_html():
     <meta property="og:title" content="The Insider's AI Stack">
     <meta property="og:description" content="{tool_count} curated AI tools. Updated daily. No pay-to-play.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {{
             --yellow: #FFF67F;
@@ -204,28 +204,26 @@ def generate_elite_html():
         
         /* Header */
         header {{
-            padding: 80px 0 60px;
+            padding: 50px 0 40px;
             text-align: center;
             position: relative;
         }}
         
         .eyebrow {{
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 500;
+            font-size: 0.75rem;
+            font-weight: 600;
             color: var(--yellow);
             text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 20px;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
         }}
         
         h1 {{
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(3rem, 8vw, 5rem);
+            font-size: clamp(2rem, 5vw, 3rem);
             font-weight: 700;
-            letter-spacing: -2px;
-            line-height: 1.1;
-            margin-bottom: 24px;
+            letter-spacing: -1px;
+            line-height: 1.2;
+            margin-bottom: 16px;
         }}
         
         h1 span {{
@@ -260,8 +258,7 @@ def generate_elite_html():
         }}
         
         .stat-value {{
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.5rem;
+            font-size: 1.75rem;
             font-weight: 700;
             color: var(--yellow);
         }}
@@ -275,18 +272,18 @@ def generate_elite_html():
         
         /* Search */
         .search-wrap {{
-            max-width: 500px;
-            margin: 50px auto 0;
+            max-width: 400px;
+            margin: 30px auto 0;
             position: relative;
         }}
         
         #search {{
             width: 100%;
-            padding: 18px 24px;
-            font-size: 1rem;
+            padding: 12px 18px;
+            font-size: 0.9rem;
             font-family: inherit;
             border: 1px solid var(--border);
-            border-radius: 16px;
+            border-radius: 10px;
             background: var(--bg-card);
             color: var(--text);
             transition: all 0.3s ease;
@@ -302,31 +299,29 @@ def generate_elite_html():
         
         /* Bento Grid */
         .bento-section {{
-            padding: 60px 0;
+            padding: 30px 0;
         }}
         
         .section-label {{
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 600;
             color: var(--text-dim);
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 24px;
+            margin-bottom: 16px;
         }}
         
         .bento-grid {{
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(2, 200px);
-            gap: 20px;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 12px;
         }}
         
         .bento-card {{
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 28px;
+            border-radius: 12px;
+            padding: 16px;
             text-decoration: none;
             color: var(--text);
             position: relative;
@@ -334,23 +329,21 @@ def generate_elite_html():
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.3s ease;
             transform-style: preserve-3d;
+            min-height: 120px;
         }}
         
         .bento-large {{
             grid-column: span 2;
-            grid-row: span 2;
         }}
         
         .bento-medium {{
             grid-column: span 2;
-            grid-row: span 1;
         }}
         
         .bento-small {{
             grid-column: span 1;
-            grid-row: span 1;
         }}
         
         .bento-card:hover {{
@@ -380,27 +373,28 @@ def generate_elite_html():
         }}
         
         .card-rank {{
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 600;
             color: var(--yellow);
-            margin-bottom: 12px;
-            letter-spacing: 1px;
+            margin-bottom: 6px;
         }}
         
         .bento-card h3 {{
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
+            font-size: 0.95rem;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }}
         
-        .bento-large h3 {{ font-size: 2rem; }}
+        .bento-large h3 {{ font-size: 1.1rem; }}
         
         .bento-card p {{
-            font-size: 0.9rem;
+            font-size: 0.75rem;
             color: var(--text-dim);
-            margin-bottom: 16px;
+            margin-bottom: 8px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }}
         
         .card-meta {{
@@ -410,8 +404,8 @@ def generate_elite_html():
         }}
         
         .card-score {{
-            font-family: 'Space Grotesk', sans-serif;
             font-weight: 600;
+            font-size: 0.8rem;
             color: var(--yellow);
         }}
         
@@ -441,33 +435,32 @@ def generate_elite_html():
         
         /* Category sections */
         .categories-wrap {{
-            padding: 40px 0 80px;
+            padding: 20px 0 40px;
         }}
         
         .category-section {{
-            margin-bottom: 60px;
+            margin-bottom: 35px;
         }}
         
         .category-header {{
             display: flex;
             align-items: center;
-            gap: 12px;
-            margin-bottom: 24px;
+            gap: 8px;
+            margin-bottom: 14px;
         }}
         
         .category-icon {{
-            font-size: 1.25rem;
+            font-size: 1rem;
         }}
         
         .category-header h2 {{
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.2rem;
+            font-size: 0.95rem;
             font-weight: 600;
         }}
         
         .category-count {{
-            font-size: 0.75rem;
-            padding: 4px 10px;
+            font-size: 0.65rem;
+            padding: 3px 8px;
             background: var(--bg-elevated);
             border-radius: 20px;
             color: var(--text-dim);
@@ -475,18 +468,18 @@ def generate_elite_html():
         
         .tools-row {{
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 16px;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
         }}
         
         .tool-card {{
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 20px;
+            border-radius: 10px;
+            padding: 14px;
             text-decoration: none;
             color: var(--text);
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
             display: block;
         }}
         
@@ -501,16 +494,19 @@ def generate_elite_html():
         }}
         
         .tool-name {{
-            font-family: 'Space Grotesk', sans-serif;
             font-weight: 600;
-            font-size: 1rem;
-            margin-bottom: 6px;
+            font-size: 0.85rem;
+            margin-bottom: 4px;
         }}
         
         .tool-desc {{
-            font-size: 0.85rem;
+            font-size: 0.7rem;
             color: var(--text-dim);
-            margin-bottom: 12px;
+            margin-bottom: 8px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }}
         
         .tool-footer {{
@@ -520,20 +516,19 @@ def generate_elite_html():
         }}
         
         .tool-score {{
-            font-family: 'Space Grotesk', sans-serif;
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             color: var(--yellow);
         }}
         
         .tool-price {{
-            font-size: 0.75rem;
+            font-size: 0.65rem;
             color: var(--text-dim);
         }}
         
         /* Graveyard section */
         .graveyard-section {{
-            padding: 60px 0;
+            padding: 30px 0;
             border-top: 1px solid var(--border);
         }}
         
@@ -541,12 +536,11 @@ def generate_elite_html():
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 30px;
+            margin-bottom: 16px;
         }}
         
         .graveyard-header h2 {{
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.2rem;
+            font-size: 0.95rem;
             color: var(--text-dim);
         }}
         
@@ -560,86 +554,84 @@ def generate_elite_html():
         
         .graveyard-grid {{
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 12px;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 10px;
         }}
         
         .grave-card {{
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 16px;
+            border-radius: 8px;
+            padding: 12px;
             opacity: 0.6;
         }}
         
         .grave-name {{
             font-weight: 500;
+            font-size: 0.85rem;
             text-decoration: line-through;
             margin-bottom: 4px;
         }}
         
         .grave-reason {{
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: #ef4444;
         }}
         
         /* How we curate */
         .curate-section {{
-            padding: 80px 0;
+            padding: 40px 0;
             border-top: 1px solid var(--border);
             background: linear-gradient(180deg, transparent 0%, var(--bg-card) 100%);
         }}
         
         .curate-section h2 {{
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.1rem;
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }}
         
         .curate-grid {{
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
         }}
         
         .curate-card {{
             background: var(--bg-elevated);
             border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 30px;
+            border-radius: 12px;
+            padding: 20px;
             text-align: center;
         }}
         
         .curate-icon {{
-            font-size: 2rem;
-            margin-bottom: 16px;
-        }}
-        
-        .curate-card h3 {{
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1rem;
+            font-size: 1.5rem;
             margin-bottom: 10px;
         }}
         
-        .curate-card p {{
+        .curate-card h3 {{
             font-size: 0.85rem;
+            margin-bottom: 8px;
+        }}
+        
+        .curate-card p {{
+            font-size: 0.75rem;
             color: var(--text-dim);
-            line-height: 1.6;
+            line-height: 1.5;
         }}
         
         /* Footer */
         footer {{
             text-align: center;
-            padding: 60px 0;
+            padding: 40px 0;
             border-top: 1px solid var(--border);
         }}
         
         .footer-brand {{
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--text-dim);
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }}
         
         .footer-brand a {{ color: var(--yellow); text-decoration: none; }}
@@ -661,25 +653,32 @@ def generate_elite_html():
         
         .hidden {{ display: none !important; }}
         
+        @media (max-width: 1200px) {{
+            .bento-grid {{
+                grid-template-columns: repeat(4, 1fr);
+            }}
+            .curate-grid {{
+                grid-template-columns: repeat(2, 1fr);
+            }}
+        }}
+        
         @media (max-width: 900px) {{
             .bento-grid {{
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: auto;
+                grid-template-columns: repeat(3, 1fr);
             }}
             .bento-large, .bento-medium, .bento-small {{
                 grid-column: span 1;
-                grid-row: span 1;
             }}
-            .bento-large {{
-                grid-column: span 2;
+            .tools-row {{
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             }}
         }}
         
         @media (max-width: 600px) {{
-            .container {{ padding: 0 20px; }}
-            .bento-grid {{ grid-template-columns: 1fr; }}
-            .bento-large {{ grid-column: span 1; }}
-            .stats-row {{ gap: 30px; }}
+            .container {{ padding: 0 16px; }}
+            .bento-grid {{ grid-template-columns: repeat(2, 1fr); }}
+            .stats-row {{ gap: 20px; }}
+            .curate-grid {{ grid-template-columns: 1fr; }}
         }}
     </style>
 </head>
