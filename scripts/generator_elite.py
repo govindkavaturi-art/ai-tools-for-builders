@@ -802,7 +802,7 @@ def generate_elite_html():
             <div class="footer-links">
                 <a href="https://instagram.com/thebuildrweekly" target="_blank">Instagram</a>
                 <a href="https://x.com/thebuildrweekly" target="_blank">X</a>
-                <a href="https://youtube.com/@thebuilderweekly" target="_blank">YouTube</a>
+                <a href="https://www.youtube.com/channel/UClOFREci_11JVbEfSenpirw" target="_blank">YouTube</a>
             </div>
         </div>
     </footer>
