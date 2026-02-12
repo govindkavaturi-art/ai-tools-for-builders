@@ -55,6 +55,13 @@
         .graveyard-link { margin-top: 20px; }
         .graveyard-link a { color: #666; font-size: 0.9rem; }
         .hidden { display: none !important; }
+        .how-we-curate { background: linear-gradient(135deg, #111 0%, #0a0a0a 100%); border-top: 1px solid #222; border-bottom: 1px solid #222; padding: 60px 0; margin-top: 40px; }
+        .how-we-curate h3 { text-align: center; color: #FFF67F; font-size: 1.5rem; margin-bottom: 40px; }
+        .curate-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
+        .curate-item { background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 24px; text-align: center; }
+        .curate-icon { font-size: 2rem; margin-bottom: 12px; }
+        .curate-item h4 { color: #fff; font-size: 1.1rem; margin-bottom: 8px; }
+        .curate-item p { color: #888; font-size: 0.9rem; line-height: 1.5; }
         @media (max-width: 600px) { header h1 { font-size: 2rem; } }
     </style>
 </head>
@@ -1046,6 +1053,34 @@
 
         </div>
     </main>
+    
+    <section class="how-we-curate">
+        <div class="container">
+            <h3>🔍 How We Curate This List</h3>
+            <div class="curate-grid">
+                <div class="curate-item">
+                    <div class="curate-icon">📡</div>
+                    <h4>Daily Scanning</h4>
+                    <p>Every day at 6 AM, our AI agent scans GitHub trending, Hacker News, Product Hunt, and X/Twitter for AI tool activity.</p>
+                </div>
+                <div class="curate-item">
+                    <div class="curate-icon">📊</div>
+                    <h4>Activity Scoring</h4>
+                    <p>Each tool gets scored on recent GitHub commits, community mentions, funding news, and real builder usage. No pay-to-play.</p>
+                </div>
+                <div class="curate-item">
+                    <div class="curate-icon">☠️</div>
+                    <h4>Graveyard Rules</h4>
+                    <p>Tools with no activity for 60+ days get moved to the graveyard. No dead tools, no vaporware, no outdated recommendations.</p>
+                </div>
+                <div class="curate-item">
+                    <div class="curate-icon">🔄</div>
+                    <h4>Updated Daily</h4>
+                    <p>This list refreshes every morning. What you see is what builders are actually using right now, not what was hot in 2023.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     
     <footer>
         <div class="container">
