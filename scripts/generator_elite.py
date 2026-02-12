@@ -204,7 +204,7 @@ def generate_elite_html():
         
         /* Header */
         header {{
-            padding: 50px 0 40px;
+            padding: 30px 0 20px;
             text-align: center;
             position: relative;
         }}
@@ -219,11 +219,11 @@ def generate_elite_html():
         }}
         
         h1 {{
-            font-size: clamp(2rem, 5vw, 3rem);
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
             font-weight: 700;
-            letter-spacing: -1px;
+            letter-spacing: -0.5px;
             line-height: 1.2;
-            margin-bottom: 16px;
+            margin-bottom: 8px;
         }}
         
         h1 span {{
@@ -240,16 +240,16 @@ def generate_elite_html():
         }}
         
         .subtitle {{
-            font-size: 1.25rem;
+            font-size: 0.9rem;
             color: var(--text-dim);
-            max-width: 600px;
-            margin: 0 auto 30px;
+            max-width: 500px;
+            margin: 0 auto 16px;
         }}
         
         .stats-row {{
             display: flex;
             justify-content: center;
-            gap: 50px;
+            gap: 40px;
             flex-wrap: wrap;
         }}
         
@@ -258,13 +258,13 @@ def generate_elite_html():
         }}
         
         .stat-value {{
-            font-size: 1.75rem;
+            font-size: 1.3rem;
             font-weight: 700;
             color: var(--yellow);
         }}
         
         .stat-label {{
-            font-size: 0.8rem;
+            font-size: 0.65rem;
             color: var(--text-dim);
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -272,21 +272,22 @@ def generate_elite_html():
         
         /* Search */
         .search-wrap {{
-            max-width: 400px;
-            margin: 30px auto 0;
+            max-width: 350px;
+            margin: 16px auto 0;
             position: relative;
         }}
         
         #search {{
             width: 100%;
-            padding: 12px 18px;
-            font-size: 0.9rem;
+            padding: 10px 14px;
+            font-size: 0.85rem;
             font-family: inherit;
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            background: var(--bg-card);
+            border: 1px solid #1a1a1a;
+            border-radius: 8px;
+            background: #0d0d0d;
             color: var(--text);
             transition: all 0.3s ease;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.3);
         }}
         
         #search:focus {{
@@ -299,29 +300,29 @@ def generate_elite_html():
         
         /* Bento Grid */
         .bento-section {{
-            padding: 30px 0;
+            padding: 20px 0 16px;
         }}
         
         .section-label {{
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 600;
             color: var(--text-dim);
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }}
         
         .bento-grid {{
             display: grid;
             grid-template-columns: repeat(6, 1fr);
-            gap: 12px;
+            gap: 10px;
         }}
         
         .bento-card {{
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 16px;
+            background: #0d0d0d;
+            border: 1px solid #1a1a1a;
+            border-radius: 10px;
+            padding: 14px;
             text-decoration: none;
             color: var(--text);
             position: relative;
@@ -331,7 +332,8 @@ def generate_elite_html():
             justify-content: flex-end;
             transition: all 0.3s ease;
             transform-style: preserve-3d;
-            min-height: 120px;
+            min-height: 90px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.03);
         }}
         
         .bento-large {{
@@ -348,7 +350,8 @@ def generate_elite_html():
         
         .bento-card:hover {{
             border-color: var(--yellow);
-            transform: translateY(-5px);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.6), 0 0 0 1px var(--yellow-dim);
         }}
         
         .bento-card .card-glow {{
@@ -435,22 +438,22 @@ def generate_elite_html():
         
         /* Category sections */
         .categories-wrap {{
-            padding: 20px 0 40px;
+            padding: 10px 0 30px;
         }}
         
         .category-section {{
-            margin-bottom: 35px;
+            margin-bottom: 24px;
         }}
         
         .category-header {{
             display: flex;
             align-items: center;
-            gap: 8px;
-            margin-bottom: 14px;
+            gap: 6px;
+            margin-bottom: 10px;
         }}
         
         .category-icon {{
-            font-size: 1rem;
+            font-size: 0.9rem;
         }}
         
         .category-header h2 {{
@@ -468,25 +471,26 @@ def generate_elite_html():
         
         .tools-row {{
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 10px;
+            grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+            gap: 8px;
         }}
         
         .tool-card {{
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 14px;
+            background: #0d0d0d;
+            border: 1px solid #1a1a1a;
+            border-radius: 8px;
+            padding: 10px 12px;
             text-decoration: none;
             color: var(--text);
             transition: all 0.2s ease;
             display: block;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.03);
         }}
         
         .tool-card:hover {{
             border-color: var(--yellow);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.5), 0 0 0 1px var(--yellow-dim);
         }}
         
         .tool-card.is-hot {{
@@ -495,18 +499,19 @@ def generate_elite_html():
         
         .tool-name {{
             font-weight: 600;
-            font-size: 0.85rem;
-            margin-bottom: 4px;
+            font-size: 0.8rem;
+            margin-bottom: 2px;
         }}
         
         .tool-desc {{
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             color: var(--text-dim);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
+            line-height: 1.4;
         }}
         
         .tool-footer {{
