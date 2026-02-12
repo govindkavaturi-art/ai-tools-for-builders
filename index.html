@@ -3,1112 +3,1669 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>200 AI Tools for Builders | The Builder Weekly</title>
-    <meta name="description" content="Curated list of the hottest AI tools, updated daily. No outdated tools - only what builders are using right now.">
-    <meta property="og:title" content="200 AI Tools for Builders">
-    <meta property="og:description" content="Daily-updated directory of AI tools that actually work. Curated by The Builder Weekly.">
+    <title>The Insider's AI Stack | The Builder Weekly</title>
+    <meta name="description" content="93 tools. Zero filler. The AI stack for builders who ship.">
+    <meta property="og:title" content="The Insider's AI Stack">
+    <meta property="og:description" content="93 curated AI tools. Updated daily. No pay-to-play.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --yellow: #FFF67F;
+            --yellow-dim: #FFF67F22;
+            --bg: #050505;
+            --bg-card: #0a0a0a;
+            --bg-elevated: #111;
+            --text: #e5e5e5;
+            --text-dim: #666;
+            --border: #1a1a1a;
+            --glow: rgba(255, 246, 127, 0.15);
+        }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #e5e5e5; line-height: 1.6; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        header { padding: 60px 0 40px; text-align: center; border-bottom: 1px solid #222; }
-        header h1 { font-size: 3rem; font-weight: 700; background: linear-gradient(135deg, #FFF67F 0%, #FFD700 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 16px; }
-        header p { color: #888; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
-        .updated { display: inline-block; margin-top: 20px; padding: 8px 16px; background: #1a1a1a; border-radius: 20px; font-size: 0.85rem; color: #666; }
-        .live-badge { background: #22c55e; color: #000; padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; margin-left: 8px; animation: pulse 2s infinite; }
-        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
-        .search-box { padding: 30px 0; position: sticky; top: 0; background: #0a0a0a; z-index: 100; border-bottom: 1px solid #222; }
-        #search { width: 100%; max-width: 500px; padding: 14px 20px; font-size: 1rem; border: 1px solid #333; border-radius: 8px; background: #111; color: #fff; display: block; margin: 0 auto; }
-        #search:focus { outline: none; border-color: #FFF67F; }
-        .stats { display: flex; justify-content: center; gap: 40px; padding: 30px 0; flex-wrap: wrap; }
-        .stat { text-align: center; }
-        .stat-num { font-size: 2.5rem; font-weight: 700; color: #FFF67F; }
-        .stat-label { color: #666; font-size: 0.9rem; }
-        .hot-section { background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%); border: 1px solid #333; border-radius: 16px; padding: 24px; margin: 30px 0; }
-        .hot-section h3 { color: #FFF67F; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
-        .hot-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
-        .hot-tool { background: #222; border-radius: 8px; padding: 12px; }
-        .hot-tool a { color: #fff; text-decoration: none; font-weight: 500; }
-        .hot-tool a:hover { color: #FFF67F; }
-        .hot-score { font-size: 0.75rem; color: #22c55e; margin-top: 4px; }
-        .categories { padding: 40px 0; }
-        .category { margin-bottom: 50px; }
-        .category-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid #222; }
-        .category-icon { font-size: 1.5rem; }
-        .category h2 { font-size: 1.4rem; font-weight: 600; color: #fff; }
-        .category-count { background: #1a1a1a; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; color: #888; }
-        .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
-        .tool { background: #111; border: 1px solid #222; border-radius: 10px; padding: 16px; transition: all 0.2s; position: relative; }
-        .tool:hover { border-color: #FFF67F; transform: translateY(-2px); }
-        .tool a { color: #fff; text-decoration: none; font-weight: 500; }
-        .tool a:hover { color: #FFF67F; }
-        .tool-desc { color: #777; font-size: 0.85rem; margin-top: 6px; }
-        .tool-meta { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
-        .tool-tag { padding: 3px 8px; background: #1a1a1a; border-radius: 4px; font-size: 0.75rem; color: #555; }
-        .tool-score { position: absolute; top: 12px; right: 12px; font-size: 0.7rem; color: #444; }
-        .tool-hot { border-color: #FFF67F33; }
-        .tool-hot::before { content: "🔥"; position: absolute; top: -8px; right: -8px; }
-        footer { text-align: center; padding: 60px 0; border-top: 1px solid #222; color: #555; }
-        footer a { color: #FFF67F; text-decoration: none; }
-        .graveyard-link { margin-top: 20px; }
-        .graveyard-link a { color: #666; font-size: 0.9rem; }
+        
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Animated gradient background */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(255, 246, 127, 0.03) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(255, 246, 127, 0.02) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(100, 100, 255, 0.01) 0%, transparent 70%);
+            animation: gradientShift 20s ease-in-out infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.1); }
+        }
+        
+        /* Neural network dots */
+        .neural-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.3;
+            background-image: radial-gradient(circle at center, var(--yellow-dim) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+        
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+        
+        /* Header */
+        header {
+            padding: 80px 0 60px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .eyebrow {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--yellow);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 700;
+            letter-spacing: -2px;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+        
+        h1 span {
+            background: linear-gradient(135deg, var(--yellow) 0%, #FFD700 50%, var(--yellow) 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        
+        @keyframes shimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-dim);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--yellow);
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Search */
+        .search-wrap {
+            max-width: 500px;
+            margin: 50px auto 0;
+            position: relative;
+        }
+        
+        #search {
+            width: 100%;
+            padding: 18px 24px;
+            font-size: 1rem;
+            font-family: inherit;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: var(--bg-card);
+            color: var(--text);
+            transition: all 0.3s ease;
+        }
+        
+        #search:focus {
+            outline: none;
+            border-color: var(--yellow);
+            box-shadow: 0 0 30px var(--glow);
+        }
+        
+        #search::placeholder { color: var(--text-dim); }
+        
+        /* Bento Grid */
+        .bento-section {
+            padding: 60px 0;
+        }
+        
+        .section-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+        }
+        
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 200px);
+            gap: 20px;
+        }
+        
+        .bento-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 28px;
+            text-decoration: none;
+            color: var(--text);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+        }
+        
+        .bento-large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        
+        .bento-medium {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+        
+        .bento-small {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+        
+        .bento-card:hover {
+            border-color: var(--yellow);
+            transform: translateY(-5px);
+        }
+        
+        .bento-card .card-glow {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, var(--glow) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+        
+        .bento-card:hover .card-glow {
+            opacity: 1;
+        }
+        
+        .card-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .card-rank {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--yellow);
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+        
+        .bento-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .bento-large h3 { font-size: 2rem; }
+        
+        .bento-card p {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            margin-bottom: 16px;
+        }
+        
+        .card-meta {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        
+        .card-score {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            color: var(--yellow);
+        }
+        
+        .card-tag {
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            background: var(--bg-elevated);
+            border-radius: 6px;
+            color: var(--text-dim);
+        }
+        
+        .activity-pulse {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.5); opacity: 0.5; }
+        }
+        
+        /* Category sections */
+        .categories-wrap {
+            padding: 40px 0 80px;
+        }
+        
+        .category-section {
+            margin-bottom: 60px;
+        }
+        
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        
+        .category-icon {
+            font-size: 1.25rem;
+        }
+        
+        .category-header h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .category-count {
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            background: var(--bg-elevated);
+            border-radius: 20px;
+            color: var(--text-dim);
+        }
+        
+        .tools-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        
+        .tool-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 20px;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.3s ease;
+            display: block;
+        }
+        
+        .tool-card:hover {
+            border-color: var(--yellow);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        
+        .tool-card.is-hot {
+            border-color: var(--yellow-dim);
+        }
+        
+        .tool-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+        
+        .tool-desc {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            margin-bottom: 12px;
+        }
+        
+        .tool-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .tool-score {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--yellow);
+        }
+        
+        .tool-price {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+        }
+        
+        /* Graveyard section */
+        .graveyard-section {
+            padding: 60px 0;
+            border-top: 1px solid var(--border);
+        }
+        
+        .graveyard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .graveyard-header h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            color: var(--text-dim);
+        }
+        
+        .graveyard-link {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            text-decoration: none;
+        }
+        
+        .graveyard-link:hover { color: var(--yellow); }
+        
+        .graveyard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 12px;
+        }
+        
+        .grave-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            opacity: 0.6;
+        }
+        
+        .grave-name {
+            font-weight: 500;
+            text-decoration: line-through;
+            margin-bottom: 4px;
+        }
+        
+        .grave-reason {
+            font-size: 0.75rem;
+            color: #ef4444;
+        }
+        
+        /* How we curate */
+        .curate-section {
+            padding: 80px 0;
+            border-top: 1px solid var(--border);
+            background: linear-gradient(180deg, transparent 0%, var(--bg-card) 100%);
+        }
+        
+        .curate-section h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .curate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+        
+        .curate-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .curate-icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+        
+        .curate-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        
+        .curate-card p {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            line-height: 1.6;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 60px 0;
+            border-top: 1px solid var(--border);
+        }
+        
+        .footer-brand {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            margin-bottom: 16px;
+        }
+        
+        .footer-brand a { color: var(--yellow); text-decoration: none; }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+        
+        .footer-links a {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .footer-links a:hover { color: var(--yellow); }
+        
         .hidden { display: none !important; }
-        .how-we-curate { background: linear-gradient(135deg, #111 0%, #0a0a0a 100%); border-top: 1px solid #222; border-bottom: 1px solid #222; padding: 60px 0; margin-top: 40px; }
-        .how-we-curate h3 { text-align: center; color: #FFF67F; font-size: 1.5rem; margin-bottom: 40px; }
-        .curate-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
-        .curate-item { background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 24px; text-align: center; }
-        .curate-icon { font-size: 2rem; margin-bottom: 12px; }
-        .curate-item h4 { color: #fff; font-size: 1.1rem; margin-bottom: 8px; }
-        .curate-item p { color: #888; font-size: 0.9rem; line-height: 1.5; }
-        @media (max-width: 600px) { header h1 { font-size: 2rem; } }
+        
+        @media (max-width: 900px) {
+            .bento-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+            }
+            .bento-large, .bento-medium, .bento-small {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+            .bento-large {
+                grid-column: span 2;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .container { padding: 0 20px; }
+            .bento-grid { grid-template-columns: 1fr; }
+            .bento-large { grid-column: span 1; }
+            .stats-row { gap: 30px; }
+        }
     </style>
 </head>
 <body>
+    <div class="bg-gradient"></div>
+    <div class="neural-bg"></div>
+    
     <header>
         <div class="container">
-            <h1>200 AI Tools for Builders</h1>
-            <p>Daily-updated directory of AI tools that actually work. Dead tools get removed. Only what builders are using right now.</p>
-            <span class="updated">Updated February 12, 2026<span class="live-badge">LIVE</span></span>
+            <div class="eyebrow">The Builder Weekly Presents</div>
+            <h1><span>The Insider's AI Stack</span></h1>
+            <p class="subtitle">93 tools. Zero filler. Scored by real activity, not ads. Updated daily.</p>
+            
+            <div class="stats-row">
+                <div class="stat">
+                    <div class="stat-value">93</div>
+                    <div class="stat-label">Active Tools</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">2</div>
+                    <div class="stat-label">In Graveyard</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">6AM</div>
+                    <div class="stat-label">Daily Refresh</div>
+                </div>
+            </div>
+            
+            <div class="search-wrap">
+                <input type="text" id="search" placeholder="Search the stack...">
+            </div>
         </div>
     </header>
     
-    <div class="search-box">
-        <div class="container">
-            <input type="text" id="search" placeholder="Search tools..." autocomplete="off">
-        </div>
-    </div>
-    
-    <main class="container">
-        <div class="stats">
-            <div class="stat"><div class="stat-num">93</div><div class="stat-label">Active Tools</div></div>
-            <div class="stat"><div class="stat-num">19</div><div class="stat-label">Categories</div></div>
-            <div class="stat"><div class="stat-num">2</div><div class="stat-label">In Graveyard</div></div>
-        </div>
-        
-        <div class="hot-section">
-            <h3>🔥 Hot This Week</h3>
-            <div class="hot-grid">
-                <div class="hot-tool">
-                    <a href="https://claude.ai" target="_blank">Claude</a>
-                    <div class="hot-score">Score: 97</div>
+    <main>
+        <section class="bento-section">
+            <div class="container">
+                <div class="section-label">🔥 Top Performers This Week</div>
+                <div class="bento-grid">
+                    
+            <a href="https://claude.ai" target="_blank" class="bento-card bento-large" data-tilt>
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <div class="card-rank">#1</div>
+                    <h3>Claude</h3>
+                    <p>Anthropic's AI assistant</p>
+                    <div class="card-meta">
+                        <span class="card-score">97</span>
+                        <span class="card-tag">Free tier</span>
+                    </div>
                 </div>
-                <div class="hot-tool">
-                    <a href="https://cursor.sh" target="_blank">Cursor</a>
-                    <div class="hot-score">Score: 95</div>
+                <div class="activity-pulse"></div>
+            </a>
+            <a href="https://cursor.sh" target="_blank" class="bento-card bento-large" data-tilt>
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <div class="card-rank">#2</div>
+                    <h3>Cursor</h3>
+                    <p>AI-first code editor, built on VSCode</p>
+                    <div class="card-meta">
+                        <span class="card-score">95</span>
+                        <span class="card-tag">Free tier</span>
+                    </div>
                 </div>
-                <div class="hot-tool">
-                    <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
-                    <div class="hot-score">Score: 93</div>
+                <div class="activity-pulse"></div>
+            </a>
+            <a href="https://chat.openai.com" target="_blank" class="bento-card bento-medium" data-tilt>
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <div class="card-rank">#3</div>
+                    <h3>ChatGPT</h3>
+                    <p>OpenAI's conversational AI</p>
+                    <div class="card-meta">
+                        <span class="card-score">93</span>
+                        <span class="card-tag">Free tier</span>
+                    </div>
                 </div>
-                <div class="hot-tool">
-                    <a href="https://v0.dev" target="_blank">v0</a>
-                    <div class="hot-score">Score: 91</div>
+                <div class="activity-pulse"></div>
+            </a>
+            <a href="https://v0.dev" target="_blank" class="bento-card bento-medium" data-tilt>
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <div class="card-rank">#4</div>
+                    <h3>v0</h3>
+                    <p>AI UI generation by Vercel</p>
+                    <div class="card-meta">
+                        <span class="card-score">91</span>
+                        <span class="card-tag">Free tier</span>
+                    </div>
                 </div>
-                <div class="hot-tool">
-                    <a href="https://elevenlabs.io" target="_blank">ElevenLabs</a>
-                    <div class="hot-score">Score: 91</div>
+                <div class="activity-pulse"></div>
+            </a>
+            <a href="https://elevenlabs.io" target="_blank" class="bento-card bento-small" data-tilt>
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <div class="card-rank">#5</div>
+                    <h3>ElevenLabs</h3>
+                    <p>Best-in-class voice AI and TTS</p>
+                    <div class="card-meta">
+                        <span class="card-score">91</span>
+                        <span class="card-tag">Free tier</span>
+                    </div>
                 </div>
-                <div class="hot-tool">
-                    <a href="https://perplexity.ai" target="_blank">Perplexity</a>
-                    <div class="hot-score">Score: 91</div>
+                <div class="activity-pulse"></div>
+            </a>
+            <a href="https://perplexity.ai" target="_blank" class="bento-card bento-small" data-tilt>
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <div class="card-rank">#6</div>
+                    <h3>Perplexity</h3>
+                    <p>AI-powered search engine</p>
+                    <div class="card-meta">
+                        <span class="card-score">91</span>
+                        <span class="card-tag">Free tier</span>
+                    </div>
                 </div>
-                <div class="hot-tool">
-                    <a href="https://bolt.new" target="_blank">Bolt</a>
-                    <div class="hot-score">Score: 91</div>
+                <div class="activity-pulse"></div>
+            </a>
                 </div>
-                <div class="hot-tool">
-                    <a href="https://blackforestlabs.ai" target="_blank">Flux</a>
-                    <div class="hot-score">Score: 89</div>
-                </div>
-                <div class="hot-tool">
-                    <a href="https://openai.com/operator" target="_blank">Operator</a>
-                    <div class="hot-score">Score: 89</div>
-                </div>
-                <div class="hot-tool">
-                    <a href="https://replit.com" target="_blank">Replit Agent</a>
-                    <div class="hot-score">Score: 89</div>
-                </div>
-
             </div>
-        </div>
+        </section>
         
-        <div class="categories">
-            <div class="category" data-category="writing">
+        <section class="categories-wrap">
+            <div class="container">
+                <div class="section-label">📦 The Full Stack</div>
+                
+            <section class="category-section" data-category="coding">
                 <div class="category-header">
-                    <span class="category-icon">✍️</span>
-                    <h2>Writing & Content</h2>
-                    <span class="category-count">5 tools</span>
+                    <span class="category-icon">💻</span>
+                    <h2>Code & Ship</h2>
+                    <span class="category-count">7</span>
                 </div>
-                <div class="tools-grid">
-                    <div class="tool tool-hot">
-                        <a href="https://grammarly.com" target="_blank">Grammarly</a>
-                        <div class="tool-desc">AI writing enhancement</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                <div class="tools-row">
+                    
+                    <a href="https://bolt.new" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Bolt</div>
+                        <div class="tool-desc">AI full-stack app builder in browser...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">91</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">80</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://writer.com" target="_blank">Writer</a>
-                        <div class="tool-desc">Enterprise content AI</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Enterprise</span>
+                    </a>
+                    <a href="https://replit.com" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Replit Agent</div>
+                        <div class="tool-desc">AI agent that builds apps from prompts...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">89</span>
+                            <span class="tool-price">$25/mo</span>
                         </div>
-                        <span class="tool-score">75</span>
-                    </div>
-                    <div class="tool">
-                        <a href="https://jasper.ai" target="_blank">Jasper</a>
-                        <div class="tool-desc">Enterprise AI content platform</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">$49/mo</span>
+                    </a>
+                    <a href="https://codeium.com/windsurf" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Windsurf</div>
+                        <div class="tool-desc">Agentic IDE by Codeium...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">88</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">74</span>
-                    </div>
-                    <div class="tool">
-                        <a href="https://lex.page" target="_blank">Lex</a>
-                        <div class="tool-desc">AI-first writing app</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">$8/mo</span>
+                    </a>
+                    <a href="https://lovable.dev" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Lovable</div>
+                        <div class="tool-desc">AI app builder (formerly GPT Engineer)...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">87</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">72</span>
-                    </div>
-                    <div class="tool">
-                        <a href="https://wordtune.com" target="_blank">Wordtune</a>
-                        <div class="tool-desc">AI rewriting tool</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://devin.ai" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Devin</div>
+                        <div class="tool-desc">Autonomous AI software engineer...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">85</span>
+                            <span class="tool-price">$500/mo</span>
                         </div>
-                        <span class="tool-score">72</span>
-                    </div>
+                    </a>
+                    <a href="https://aider.chat" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Aider</div>
+                        <div class="tool-desc">AI pair programming in terminal...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">85</span>
+                            <span class="tool-price">Free</span>
+                        </div>
+                    </a>
+                    <a href="https://github.com/features/copilot" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">GitHub Copilot</div>
+                        <div class="tool-desc">AI pair programmer...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">84</span>
+                            <span class="tool-price">$10/mo</span>
+                        </div>
+                    </a>
                 </div>
-            </div>
-            <div class="category" data-category="image">
+            </section>
+            <section class="category-section" data-category="agents">
+                <div class="category-header">
+                    <span class="category-icon">🤖</span>
+                    <h2>AI Agents</h2>
+                    <span class="category-count">6</span>
+                </div>
+                <div class="tools-row">
+                    
+                    <a href="https://openai.com/operator" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Operator</div>
+                        <div class="tool-desc">OpenAI's web agent...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">89</span>
+                            <span class="tool-price">ChatGPT Pro</span>
+                        </div>
+                    </a>
+                    <a href="https://gemini.google.com" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Gemini</div>
+                        <div class="tool-desc">Google's AI assistant...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">88</span>
+                            <span class="tool-price">Free tier</span>
+                        </div>
+                    </a>
+                    <a href="https://x.ai" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Grok</div>
+                        <div class="tool-desc">xAI's conversational AI...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">84</span>
+                            <span class="tool-price">X Premium</span>
+                        </div>
+                    </a>
+                    <a href="https://multion.ai" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">MultiOn</div>
+                        <div class="tool-desc">AI web agent...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">83</span>
+                            <span class="tool-price">Beta</span>
+                        </div>
+                    </a>
+                    <a href="https://poe.com" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Poe</div>
+                        <div class="tool-desc">Multi-model AI chat...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">80</span>
+                            <span class="tool-price">Free tier</span>
+                        </div>
+                    </a>
+                    <a href="https://character.ai" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Character.AI</div>
+                        <div class="tool-desc">AI personas and characters...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">78</span>
+                            <span class="tool-price">Free tier</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <section class="category-section" data-category="image">
                 <div class="category-header">
                     <span class="category-icon">🎨</span>
-                    <h2>Image Generation</h2>
-                    <span class="category-count">7 tools</span>
+                    <h2>Visual Creation</h2>
+                    <span class="category-count">7</span>
                 </div>
-                <div class="tools-grid">
-                    <div class="tool tool-hot">
-                        <a href="https://blackforestlabs.ai" target="_blank">Flux</a>
-                        <div class="tool-desc">State-of-the-art open image model</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free/API</span>
+                <div class="tools-row">
+                    
+                    <a href="https://blackforestlabs.ai" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Flux</div>
+                        <div class="tool-desc">State-of-the-art open image model...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">89</span>
+                            <span class="tool-price">Free/API</span>
                         </div>
-                        <span class="tool-score">89</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://ideogram.ai" target="_blank">Ideogram</a>
-                        <div class="tool-desc">Best text-in-image generation</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://ideogram.ai" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Ideogram</div>
+                        <div class="tool-desc">Best text-in-image generation...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">87</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">87</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://midjourney.com" target="_blank">Midjourney</a>
-                        <div class="tool-desc">Premium AI art generation</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">$10/mo</span>
+                    </a>
+                    <a href="https://midjourney.com" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Midjourney</div>
+                        <div class="tool-desc">Premium AI art generation...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">85</span>
+                            <span class="tool-price">$10/mo</span>
                         </div>
-                        <span class="tool-score">85</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://recraft.ai" target="_blank">Recraft</a>
-                        <div class="tool-desc">AI design tool for vectors and images</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://recraft.ai" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Recraft</div>
+                        <div class="tool-desc">AI design tool for vectors and images...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">85</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">85</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://openai.com/dall-e-3" target="_blank">DALL-E 3</a>
-                        <div class="tool-desc">OpenAI's latest image model</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Pay per use</span>
+                    </a>
+                    <a href="https://openai.com/dall-e-3" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">DALL-E 3</div>
+                        <div class="tool-desc">OpenAI's latest image model...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">83</span>
+                            <span class="tool-price">Pay per use</span>
                         </div>
-                        <span class="tool-score">83</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://krea.ai" target="_blank">Krea AI</a>
-                        <div class="tool-desc">Real-time AI image generation</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://krea.ai" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Krea AI</div>
+                        <div class="tool-desc">Real-time AI image generation...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">82</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">82</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://leonardo.ai" target="_blank">Leonardo.ai</a>
-                        <div class="tool-desc">AI image generation for creatives</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://leonardo.ai" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Leonardo.ai</div>
+                        <div class="tool-desc">AI image generation for creatives...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">79</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">79</span>
-                    </div>
+                    </a>
                 </div>
-            </div>
-            <div class="category" data-category="video">
+            </section>
+            <section class="category-section" data-category="video">
                 <div class="category-header">
                     <span class="category-icon">🎬</span>
-                    <h2>Video Creation</h2>
-                    <span class="category-count">9 tools</span>
+                    <h2>Video & Motion</h2>
+                    <span class="category-count">9</span>
                 </div>
-                <div class="tools-grid">
-                    <div class="tool tool-hot">
-                        <a href="https://runwayml.com" target="_blank">Runway</a>
-                        <div class="tool-desc">Gen-3 Alpha video generation</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">$15/mo</span>
+                <div class="tools-row">
+                    
+                    <a href="https://runwayml.com" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Runway</div>
+                        <div class="tool-desc">Gen-3 Alpha video generation...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">88</span>
+                            <span class="tool-price">$15/mo</span>
                         </div>
-                        <span class="tool-score">88</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://klingai.com" target="_blank">Kling AI</a>
-                        <div class="tool-desc">Long-form AI video generation</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://klingai.com" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Kling AI</div>
+                        <div class="tool-desc">Long-form AI video generation...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">87</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">87</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://pika.art" target="_blank">Pika</a>
-                        <div class="tool-desc">AI video generation and editing</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://pika.art" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Pika</div>
+                        <div class="tool-desc">AI video generation and editing...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">85</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">85</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://lumalabs.ai/dream-machine" target="_blank">Luma Dream Machine</a>
-                        <div class="tool-desc">High quality AI video from text</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://lumalabs.ai/dream-machine" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Luma Dream Machine</div>
+                        <div class="tool-desc">High quality AI video from text...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">85</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">85</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://opus.pro" target="_blank">Opus Clip</a>
-                        <div class="tool-desc">AI video repurposing for shorts</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://opus.pro" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Opus Clip</div>
+                        <div class="tool-desc">AI video repurposing for shorts...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">83</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">83</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://descript.com" target="_blank">Descript</a>
-                        <div class="tool-desc">AI video/podcast editor with Overdub</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://descript.com" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Descript</div>
+                        <div class="tool-desc">AI video/podcast editor with Overdub...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">82</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">82</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://heygen.com" target="_blank">HeyGen</a>
-                        <div class="tool-desc">AI avatar video creation</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">$29/mo</span>
+                    </a>
+                    <a href="https://heygen.com" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">HeyGen</div>
+                        <div class="tool-desc">AI avatar video creation...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">81</span>
+                            <span class="tool-price">$29/mo</span>
                         </div>
-                        <span class="tool-score">81</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://captions.ai" target="_blank">Captions</a>
-                        <div class="tool-desc">AI captions and video editing</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://captions.ai" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Captions</div>
+                        <div class="tool-desc">AI captions and video editing...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">80</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">80</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://synthesia.io" target="_blank">Synthesia</a>
-                        <div class="tool-desc">AI presenter videos</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">$30/mo</span>
+                    </a>
+                    <a href="https://synthesia.io" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Synthesia</div>
+                        <div class="tool-desc">AI presenter videos...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">79</span>
+                            <span class="tool-price">$30/mo</span>
                         </div>
-                        <span class="tool-score">79</span>
-                    </div>
+                    </a>
                 </div>
-            </div>
-            <div class="category" data-category="audio">
+            </section>
+            <section class="category-section" data-category="audio">
                 <div class="category-header">
                     <span class="category-icon">🎙️</span>
                     <h2>Audio & Voice</h2>
-                    <span class="category-count">5 tools</span>
+                    <span class="category-count">4</span>
                 </div>
-                <div class="tools-grid">
-                    <div class="tool tool-hot">
-                        <a href="https://elevenlabs.io" target="_blank">ElevenLabs</a>
-                        <div class="tool-desc">Best-in-class voice AI and TTS</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                <div class="tools-row">
+                    
+                    <a href="https://suno.ai" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Suno</div>
+                        <div class="tool-desc">AI music generation...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">87</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">91</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://suno.ai" target="_blank">Suno</a>
-                        <div class="tool-desc">AI music generation</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://udio.com" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Udio</div>
+                        <div class="tool-desc">AI song creation...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">85</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">87</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://udio.com" target="_blank">Udio</a>
-                        <div class="tool-desc">AI song creation</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://play.ht" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Play.ht</div>
+                        <div class="tool-desc">AI voice generator...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">77</span>
+                            <span class="tool-price">$39/mo</span>
                         </div>
-                        <span class="tool-score">85</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://play.ht" target="_blank">Play.ht</a>
-                        <div class="tool-desc">AI voice generator</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">$39/mo</span>
+                    </a>
+                    <a href="https://resemble.ai" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Resemble AI</div>
+                        <div class="tool-desc">Voice cloning API...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">76</span>
+                            <span class="tool-price">$0.006/sec</span>
                         </div>
-                        <span class="tool-score">77</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://resemble.ai" target="_blank">Resemble AI</a>
-                        <div class="tool-desc">Voice cloning API</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">$0.006/sec</span>
-                        </div>
-                        <span class="tool-score">76</span>
-                    </div>
+                    </a>
                 </div>
-            </div>
-            <div class="category" data-category="coding">
-                <div class="category-header">
-                    <span class="category-icon">💻</span>
-                    <h2>Coding & Development</h2>
-                    <span class="category-count">9 tools</span>
-                </div>
-                <div class="tools-grid">
-                    <div class="tool tool-hot">
-                        <a href="https://cursor.sh" target="_blank">Cursor</a>
-                        <div class="tool-desc">AI-first code editor, built on VSCode</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
-                        </div>
-                        <span class="tool-score">95</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://v0.dev" target="_blank">v0</a>
-                        <div class="tool-desc">AI UI generation by Vercel</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
-                        </div>
-                        <span class="tool-score">91</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://bolt.new" target="_blank">Bolt</a>
-                        <div class="tool-desc">AI full-stack app builder in browser</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
-                        </div>
-                        <span class="tool-score">91</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://replit.com" target="_blank">Replit Agent</a>
-                        <div class="tool-desc">AI agent that builds apps from prompts</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">$25/mo</span>
-                        </div>
-                        <span class="tool-score">89</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://codeium.com/windsurf" target="_blank">Windsurf</a>
-                        <div class="tool-desc">Agentic IDE by Codeium</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
-                        </div>
-                        <span class="tool-score">88</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://lovable.dev" target="_blank">Lovable</a>
-                        <div class="tool-desc">AI app builder (formerly GPT Engineer)</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
-                        </div>
-                        <span class="tool-score">87</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://devin.ai" target="_blank">Devin</a>
-                        <div class="tool-desc">Autonomous AI software engineer</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">$500/mo</span>
-                        </div>
-                        <span class="tool-score">85</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://aider.chat" target="_blank">Aider</a>
-                        <div class="tool-desc">AI pair programming in terminal</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free</span>
-                        </div>
-                        <span class="tool-score">85</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a>
-                        <div class="tool-desc">AI pair programmer</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">$10/mo</span>
-                        </div>
-                        <span class="tool-score">84</span>
-                    </div>
-                </div>
-            </div>
-            <div class="category" data-category="productivity">
+            </section>
+            <section class="category-section" data-category="productivity">
                 <div class="category-header">
                     <span class="category-icon">⚡</span>
                     <h2>Productivity</h2>
-                    <span class="category-count">8 tools</span>
+                    <span class="category-count">8</span>
                 </div>
-                <div class="tools-grid">
-                    <div class="tool tool-hot">
-                        <a href="https://granola.so" target="_blank">Granola</a>
-                        <div class="tool-desc">AI notepad for meetings</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                <div class="tools-row">
+                    
+                    <a href="https://granola.so" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Granola</div>
+                        <div class="tool-desc">AI notepad for meetings...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">85</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">85</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://linear.app" target="_blank">Linear</a>
-                        <div class="tool-desc">AI-powered issue tracking</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://linear.app" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Linear</div>
+                        <div class="tool-desc">AI-powered issue tracking...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">83</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">83</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://notion.so/product/ai" target="_blank">Notion AI</a>
-                        <div class="tool-desc">AI in your workspace</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">$10/mo</span>
+                    </a>
+                    <a href="https://notion.so/product/ai" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Notion AI</div>
+                        <div class="tool-desc">AI in your workspace...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">82</span>
+                            <span class="tool-price">$10/mo</span>
                         </div>
-                        <span class="tool-score">82</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://otter.ai" target="_blank">Otter.ai</a>
-                        <div class="tool-desc">AI meeting transcription</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://otter.ai" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Otter.ai</div>
+                        <div class="tool-desc">AI meeting transcription...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">80</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">80</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://fireflies.ai" target="_blank">Fireflies.ai</a>
-                        <div class="tool-desc">AI meeting assistant</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://fireflies.ai" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Fireflies.ai</div>
+                        <div class="tool-desc">AI meeting assistant...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">80</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">80</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://tldv.io" target="_blank">tl;dv</a>
-                        <div class="tool-desc">AI meeting recorder</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://tldv.io" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">tl;dv</div>
+                        <div class="tool-desc">AI meeting recorder...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">77</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">77</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://reclaim.ai" target="_blank">Reclaim.ai</a>
-                        <div class="tool-desc">AI calendar management</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://reclaim.ai" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Reclaim.ai</div>
+                        <div class="tool-desc">AI calendar management...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">77</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">77</span>
-                    </div>
-                    <div class="tool">
-                        <a href="https://mem.ai" target="_blank">Mem</a>
-                        <div class="tool-desc">AI-powered notes</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">$15/mo</span>
+                    </a>
+                    <a href="https://mem.ai" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Mem</div>
+                        <div class="tool-desc">AI-powered notes...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">74</span>
+                            <span class="tool-price">$15/mo</span>
                         </div>
-                        <span class="tool-score">74</span>
-                    </div>
+                    </a>
                 </div>
-            </div>
-            <div class="category" data-category="research">
+            </section>
+            <section class="category-section" data-category="research">
                 <div class="category-header">
                     <span class="category-icon">🔬</span>
-                    <h2>Research & Analysis</h2>
-                    <span class="category-count">6 tools</span>
+                    <h2>Research</h2>
+                    <span class="category-count">5</span>
                 </div>
-                <div class="tools-grid">
-                    <div class="tool tool-hot">
-                        <a href="https://perplexity.ai" target="_blank">Perplexity</a>
-                        <div class="tool-desc">AI-powered search engine</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                <div class="tools-row">
+                    
+                    <a href="https://notebooklm.google.com" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">NotebookLM</div>
+                        <div class="tool-desc">Google's AI research notebook...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">88</span>
+                            <span class="tool-price">Free</span>
                         </div>
-                        <span class="tool-score">91</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://notebooklm.google.com" target="_blank">NotebookLM</a>
-                        <div class="tool-desc">Google's AI research notebook</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free</span>
+                    </a>
+                    <a href="https://exa.ai" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Exa</div>
+                        <div class="tool-desc">Neural search API for AI apps...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">85</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">88</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://exa.ai" target="_blank">Exa</a>
-                        <div class="tool-desc">Neural search API for AI apps</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://tavily.com" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Tavily</div>
+                        <div class="tool-desc">Search API for AI agents...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">83</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">85</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://tavily.com" target="_blank">Tavily</a>
-                        <div class="tool-desc">Search API for AI agents</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://elicit.com" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Elicit</div>
+                        <div class="tool-desc">AI research assistant...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">80</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">83</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://elicit.com" target="_blank">Elicit</a>
-                        <div class="tool-desc">AI research assistant</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://consensus.app" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Consensus</div>
+                        <div class="tool-desc">AI search for scientific papers...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">77</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">80</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://consensus.app" target="_blank">Consensus</a>
-                        <div class="tool-desc">AI search for scientific papers</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
-                        </div>
-                        <span class="tool-score">77</span>
-                    </div>
+                    </a>
                 </div>
-            </div>
-            <div class="category" data-category="marketing">
-                <div class="category-header">
-                    <span class="category-icon">📈</span>
-                    <h2>Marketing</h2>
-                    <span class="category-count">3 tools</span>
-                </div>
-                <div class="tools-grid">
-                    <div class="tool tool-hot">
-                        <a href="https://typeface.ai" target="_blank">Typeface</a>
-                        <div class="tool-desc">Enterprise content AI</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Enterprise</span>
-                        </div>
-                        <span class="tool-score">78</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://adcreative.ai" target="_blank">AdCreative.ai</a>
-                        <div class="tool-desc">AI ad generation</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">$29/mo</span>
-                        </div>
-                        <span class="tool-score">76</span>
-                    </div>
-                    <div class="tool">
-                        <a href="https://pencil.li" target="_blank">Pencil</a>
-                        <div class="tool-desc">AI ad creative</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">$119/mo</span>
-                        </div>
-                        <span class="tool-score">73</span>
-                    </div>
-                </div>
-            </div>
-            <div class="category" data-category="design">
-                <div class="category-header">
-                    <span class="category-icon">🎯</span>
-                    <h2>Design</h2>
-                    <span class="category-count">5 tools</span>
-                </div>
-                <div class="tools-grid">
-                    <div class="tool tool-hot">
-                        <a href="https://framer.com" target="_blank">Framer</a>
-                        <div class="tool-desc">AI website builder</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
-                        </div>
-                        <span class="tool-score">86</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://figma.com" target="_blank">Figma AI</a>
-                        <div class="tool-desc">AI features in Figma</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
-                        </div>
-                        <span class="tool-score">84</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://canva.com" target="_blank">Canva</a>
-                        <div class="tool-desc">AI-powered design platform</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
-                        </div>
-                        <span class="tool-score">82</span>
-                    </div>
-                    <div class="tool">
-                        <a href="https://uizard.io" target="_blank">Uizard</a>
-                        <div class="tool-desc">AI UI design</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
-                        </div>
-                        <span class="tool-score">74</span>
-                    </div>
-                    <div class="tool">
-                        <a href="https://magician.design" target="_blank">Magician</a>
-                        <div class="tool-desc">AI for Figma</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">$5/mo</span>
-                        </div>
-                        <span class="tool-score">72</span>
-                    </div>
-                </div>
-            </div>
-            <div class="category" data-category="sales">
-                <div class="category-header">
-                    <span class="category-icon">💰</span>
-                    <h2>Sales</h2>
-                    <span class="category-count">4 tools</span>
-                </div>
-                <div class="tools-grid">
-                    <div class="tool tool-hot">
-                        <a href="https://apollo.io" target="_blank">Apollo</a>
-                        <div class="tool-desc">Sales intelligence</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
-                        </div>
-                        <span class="tool-score">81</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://gong.io" target="_blank">Gong</a>
-                        <div class="tool-desc">Revenue intelligence platform</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Enterprise</span>
-                        </div>
-                        <span class="tool-score">78</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://lavender.ai" target="_blank">Lavender</a>
-                        <div class="tool-desc">AI email coach</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
-                        </div>
-                        <span class="tool-score">76</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://outreach.io" target="_blank">Outreach</a>
-                        <div class="tool-desc">Sales engagement platform</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Enterprise</span>
-                        </div>
-                        <span class="tool-score">75</span>
-                    </div>
-                </div>
-            </div>
-            <div class="category" data-category="support">
-                <div class="category-header">
-                    <span class="category-icon">💬</span>
-                    <h2>Customer Support</h2>
-                    <span class="category-count">3 tools</span>
-                </div>
-                <div class="tools-grid">
-                    <div class="tool tool-hot">
-                        <a href="https://intercom.com/fin" target="_blank">Intercom Fin</a>
-                        <div class="tool-desc">AI customer service agent</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">$0.99/resolution</span>
-                        </div>
-                        <span class="tool-score">85</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://chatbase.co" target="_blank">Chatbase</a>
-                        <div class="tool-desc">Custom GPT chatbots</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
-                        </div>
-                        <span class="tool-score">79</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://tidio.com" target="_blank">Tidio</a>
-                        <div class="tool-desc">AI chatbots for support</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
-                        </div>
-                        <span class="tool-score">77</span>
-                    </div>
-                </div>
-            </div>
-            <div class="category" data-category="data">
-                <div class="category-header">
-                    <span class="category-icon">📊</span>
-                    <h2>Data & Analytics</h2>
-                    <span class="category-count">3 tools</span>
-                </div>
-                <div class="tools-grid">
-                    <div class="tool tool-hot">
-                        <a href="https://julius.ai" target="_blank">Julius</a>
-                        <div class="tool-desc">AI data analyst</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
-                        </div>
-                        <span class="tool-score">85</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://hex.tech" target="_blank">Hex</a>
-                        <div class="tool-desc">AI data workspace</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
-                        </div>
-                        <span class="tool-score">83</span>
-                    </div>
-                    <div class="tool">
-                        <a href="https://akkio.com" target="_blank">Akkio</a>
-                        <div class="tool-desc">AI for analysts</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">$50/mo</span>
-                        </div>
-                        <span class="tool-score">74</span>
-                    </div>
-                </div>
-            </div>
-            <div class="category" data-category="legal">
-                <div class="category-header">
-                    <span class="category-icon">⚖️</span>
-                    <h2>Legal</h2>
-                    <span class="category-count">2 tools</span>
-                </div>
-                <div class="tools-grid">
-                    <div class="tool tool-hot">
-                        <a href="https://harvey.ai" target="_blank">Harvey</a>
-                        <div class="tool-desc">AI for lawyers</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Enterprise</span>
-                        </div>
-                        <span class="tool-score">84</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://spellbook.legal" target="_blank">Spellbook</a>
-                        <div class="tool-desc">AI contract drafting</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">$99/mo</span>
-                        </div>
-                        <span class="tool-score">76</span>
-                    </div>
-                </div>
-            </div>
-            <div class="category" data-category="finance">
-                <div class="category-header">
-                    <span class="category-icon">💳</span>
-                    <h2>Finance</h2>
-                    <span class="category-count">2 tools</span>
-                </div>
-                <div class="tools-grid">
-                    <div class="tool tool-hot">
-                        <a href="https://ramp.com" target="_blank">Ramp</a>
-                        <div class="tool-desc">AI expense management</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free</span>
-                        </div>
-                        <span class="tool-score">82</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://brex.com" target="_blank">Brex</a>
-                        <div class="tool-desc">AI spend management</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
-                        </div>
-                        <span class="tool-score">80</span>
-                    </div>
-                </div>
-            </div>
-            <div class="category" data-category="agents">
-                <div class="category-header">
-                    <span class="category-icon">🤖</span>
-                    <h2>AI Agents & Chatbots</h2>
-                    <span class="category-count">8 tools</span>
-                </div>
-                <div class="tools-grid">
-                    <div class="tool tool-hot">
-                        <a href="https://claude.ai" target="_blank">Claude</a>
-                        <div class="tool-desc">Anthropic's AI assistant</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
-                        </div>
-                        <span class="tool-score">97</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
-                        <div class="tool-desc">OpenAI's conversational AI</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
-                        </div>
-                        <span class="tool-score">93</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://openai.com/operator" target="_blank">Operator</a>
-                        <div class="tool-desc">OpenAI's web agent</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">ChatGPT Pro</span>
-                        </div>
-                        <span class="tool-score">89</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://gemini.google.com" target="_blank">Gemini</a>
-                        <div class="tool-desc">Google's AI assistant</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
-                        </div>
-                        <span class="tool-score">88</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://x.ai" target="_blank">Grok</a>
-                        <div class="tool-desc">xAI's conversational AI</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">X Premium</span>
-                        </div>
-                        <span class="tool-score">84</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://multion.ai" target="_blank">MultiOn</a>
-                        <div class="tool-desc">AI web agent</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Beta</span>
-                        </div>
-                        <span class="tool-score">83</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://poe.com" target="_blank">Poe</a>
-                        <div class="tool-desc">Multi-model AI chat</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
-                        </div>
-                        <span class="tool-score">80</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://character.ai" target="_blank">Character.AI</a>
-                        <div class="tool-desc">AI personas and characters</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
-                        </div>
-                        <span class="tool-score">78</span>
-                    </div>
-                </div>
-            </div>
-            <div class="category" data-category="automation">
+            </section>
+            <section class="category-section" data-category="automation">
                 <div class="category-header">
                     <span class="category-icon">🔄</span>
                     <h2>Automation</h2>
-                    <span class="category-count">6 tools</span>
+                    <span class="category-count">6</span>
                 </div>
-                <div class="tools-grid">
-                    <div class="tool tool-hot">
-                        <a href="https://clay.com" target="_blank">Clay</a>
-                        <div class="tool-desc">AI data enrichment and outreach</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                <div class="tools-row">
+                    
+                    <a href="https://clay.com" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Clay</div>
+                        <div class="tool-desc">AI data enrichment and outreach...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">87</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">87</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://n8n.io" target="_blank">n8n</a>
-                        <div class="tool-desc">Open source workflow automation</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://n8n.io" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">n8n</div>
+                        <div class="tool-desc">Open source workflow automation...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">86</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">86</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://browserbase.com" target="_blank">Browserbase</a>
-                        <div class="tool-desc">Headless browser infrastructure for AI</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://browserbase.com" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Browserbase</div>
+                        <div class="tool-desc">Headless browser infrastructure for AI...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">86</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">86</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://zapier.com/ai" target="_blank">Zapier AI</a>
-                        <div class="tool-desc">AI workflow automation</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://zapier.com/ai" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Zapier AI</div>
+                        <div class="tool-desc">AI workflow automation...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">82</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">82</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://make.com" target="_blank">Make</a>
-                        <div class="tool-desc">Visual automation platform</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://make.com" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Make</div>
+                        <div class="tool-desc">Visual automation platform...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">81</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">81</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://bardeen.ai" target="_blank">Bardeen</a>
-                        <div class="tool-desc">AI browser automation</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                    </a>
+                    <a href="https://bardeen.ai" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Bardeen</div>
+                        <div class="tool-desc">AI browser automation...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">80</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">80</span>
-                    </div>
+                    </a>
                 </div>
-            </div>
-            <div class="category" data-category="social">
+            </section>
+            <section class="category-section" data-category="design">
+                <div class="category-header">
+                    <span class="category-icon">🎯</span>
+                    <h2>Design</h2>
+                    <span class="category-count">5</span>
+                </div>
+                <div class="tools-row">
+                    
+                    <a href="https://framer.com" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Framer</div>
+                        <div class="tool-desc">AI website builder...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">86</span>
+                            <span class="tool-price">Free tier</span>
+                        </div>
+                    </a>
+                    <a href="https://figma.com" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Figma AI</div>
+                        <div class="tool-desc">AI features in Figma...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">84</span>
+                            <span class="tool-price">Free tier</span>
+                        </div>
+                    </a>
+                    <a href="https://canva.com" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Canva</div>
+                        <div class="tool-desc">AI-powered design platform...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">82</span>
+                            <span class="tool-price">Free tier</span>
+                        </div>
+                    </a>
+                    <a href="https://uizard.io" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Uizard</div>
+                        <div class="tool-desc">AI UI design...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">74</span>
+                            <span class="tool-price">Free tier</span>
+                        </div>
+                    </a>
+                    <a href="https://magician.design" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Magician</div>
+                        <div class="tool-desc">AI for Figma...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">72</span>
+                            <span class="tool-price">$5/mo</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <section class="category-section" data-category="writing">
+                <div class="category-header">
+                    <span class="category-icon">✍️</span>
+                    <h2>Writing</h2>
+                    <span class="category-count">5</span>
+                </div>
+                <div class="tools-row">
+                    
+                    <a href="https://grammarly.com" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Grammarly</div>
+                        <div class="tool-desc">AI writing enhancement...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">80</span>
+                            <span class="tool-price">Free tier</span>
+                        </div>
+                    </a>
+                    <a href="https://writer.com" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Writer</div>
+                        <div class="tool-desc">Enterprise content AI...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">75</span>
+                            <span class="tool-price">Enterprise</span>
+                        </div>
+                    </a>
+                    <a href="https://jasper.ai" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Jasper</div>
+                        <div class="tool-desc">Enterprise AI content platform...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">74</span>
+                            <span class="tool-price">$49/mo</span>
+                        </div>
+                    </a>
+                    <a href="https://lex.page" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Lex</div>
+                        <div class="tool-desc">AI-first writing app...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">72</span>
+                            <span class="tool-price">$8/mo</span>
+                        </div>
+                    </a>
+                    <a href="https://wordtune.com" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Wordtune</div>
+                        <div class="tool-desc">AI rewriting tool...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">72</span>
+                            <span class="tool-price">Free tier</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <section class="category-section" data-category="data">
+                <div class="category-header">
+                    <span class="category-icon">📊</span>
+                    <h2>Data</h2>
+                    <span class="category-count">3</span>
+                </div>
+                <div class="tools-row">
+                    
+                    <a href="https://julius.ai" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Julius</div>
+                        <div class="tool-desc">AI data analyst...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">85</span>
+                            <span class="tool-price">Free tier</span>
+                        </div>
+                    </a>
+                    <a href="https://hex.tech" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Hex</div>
+                        <div class="tool-desc">AI data workspace...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">83</span>
+                            <span class="tool-price">Free tier</span>
+                        </div>
+                    </a>
+                    <a href="https://akkio.com" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Akkio</div>
+                        <div class="tool-desc">AI for analysts...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">74</span>
+                            <span class="tool-price">$50/mo</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <section class="category-section" data-category="sales">
+                <div class="category-header">
+                    <span class="category-icon">💰</span>
+                    <h2>Sales</h2>
+                    <span class="category-count">4</span>
+                </div>
+                <div class="tools-row">
+                    
+                    <a href="https://apollo.io" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Apollo</div>
+                        <div class="tool-desc">Sales intelligence...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">81</span>
+                            <span class="tool-price">Free tier</span>
+                        </div>
+                    </a>
+                    <a href="https://gong.io" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Gong</div>
+                        <div class="tool-desc">Revenue intelligence platform...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">78</span>
+                            <span class="tool-price">Enterprise</span>
+                        </div>
+                    </a>
+                    <a href="https://lavender.ai" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Lavender</div>
+                        <div class="tool-desc">AI email coach...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">76</span>
+                            <span class="tool-price">Free tier</span>
+                        </div>
+                    </a>
+                    <a href="https://outreach.io" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Outreach</div>
+                        <div class="tool-desc">Sales engagement platform...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">75</span>
+                            <span class="tool-price">Enterprise</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <section class="category-section" data-category="support">
+                <div class="category-header">
+                    <span class="category-icon">💬</span>
+                    <h2>Support</h2>
+                    <span class="category-count">3</span>
+                </div>
+                <div class="tools-row">
+                    
+                    <a href="https://intercom.com/fin" target="_blank" class="tool-card is-hot" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Intercom Fin</div>
+                        <div class="tool-desc">AI customer service agent...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">85</span>
+                            <span class="tool-price">$0.99/resolution</span>
+                        </div>
+                    </a>
+                    <a href="https://chatbase.co" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Chatbase</div>
+                        <div class="tool-desc">Custom GPT chatbots...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">79</span>
+                            <span class="tool-price">Free tier</span>
+                        </div>
+                    </a>
+                    <a href="https://tidio.com" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Tidio</div>
+                        <div class="tool-desc">AI chatbots for support...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">77</span>
+                            <span class="tool-price">Free tier</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <section class="category-section" data-category="marketing">
+                <div class="category-header">
+                    <span class="category-icon">📈</span>
+                    <h2>Marketing</h2>
+                    <span class="category-count">3</span>
+                </div>
+                <div class="tools-row">
+                    
+                    <a href="https://typeface.ai" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Typeface</div>
+                        <div class="tool-desc">Enterprise content AI...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">78</span>
+                            <span class="tool-price">Enterprise</span>
+                        </div>
+                    </a>
+                    <a href="https://adcreative.ai" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">AdCreative.ai</div>
+                        <div class="tool-desc">AI ad generation...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">76</span>
+                            <span class="tool-price">$29/mo</span>
+                        </div>
+                    </a>
+                    <a href="https://pencil.li" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Pencil</div>
+                        <div class="tool-desc">AI ad creative...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">73</span>
+                            <span class="tool-price">$119/mo</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <section class="category-section" data-category="social">
                 <div class="category-header">
                     <span class="category-icon">📱</span>
-                    <h2>Social Media</h2>
-                    <span class="category-count">3 tools</span>
+                    <h2>Social</h2>
+                    <span class="category-count">3</span>
                 </div>
-                <div class="tools-grid">
-                    <div class="tool tool-hot">
-                        <a href="https://buffer.com" target="_blank">Buffer</a>
-                        <div class="tool-desc">AI social scheduling</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                <div class="tools-row">
+                    
+                    <a href="https://buffer.com" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Buffer</div>
+                        <div class="tool-desc">AI social scheduling...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">77</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">77</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://taplio.com" target="_blank">Taplio</a>
-                        <div class="tool-desc">AI for LinkedIn growth</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">$49/mo</span>
+                    </a>
+                    <a href="https://taplio.com" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Taplio</div>
+                        <div class="tool-desc">AI for LinkedIn growth...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">76</span>
+                            <span class="tool-price">$49/mo</span>
                         </div>
-                        <span class="tool-score">76</span>
-                    </div>
-                    <div class="tool">
-                        <a href="https://tweethunter.io" target="_blank">Tweet Hunter</a>
-                        <div class="tool-desc">AI for X/Twitter growth</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">$49/mo</span>
+                    </a>
+                    <a href="https://tweethunter.io" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Tweet Hunter</div>
+                        <div class="tool-desc">AI for X/Twitter growth...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">74</span>
+                            <span class="tool-price">$49/mo</span>
                         </div>
-                        <span class="tool-score">74</span>
-                    </div>
+                    </a>
                 </div>
-            </div>
-            <div class="category" data-category="education">
+            </section>
+            <section class="category-section" data-category="finance">
+                <div class="category-header">
+                    <span class="category-icon">💳</span>
+                    <h2>Finance</h2>
+                    <span class="category-count">2</span>
+                </div>
+                <div class="tools-row">
+                    
+                    <a href="https://ramp.com" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Ramp</div>
+                        <div class="tool-desc">AI expense management...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">82</span>
+                            <span class="tool-price">Free</span>
+                        </div>
+                    </a>
+                    <a href="https://brex.com" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Brex</div>
+                        <div class="tool-desc">AI spend management...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">80</span>
+                            <span class="tool-price">Free tier</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <section class="category-section" data-category="legal">
+                <div class="category-header">
+                    <span class="category-icon">⚖️</span>
+                    <h2>Legal</h2>
+                    <span class="category-count">2</span>
+                </div>
+                <div class="tools-row">
+                    
+                    <a href="https://harvey.ai" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Harvey</div>
+                        <div class="tool-desc">AI for lawyers...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">84</span>
+                            <span class="tool-price">Enterprise</span>
+                        </div>
+                    </a>
+                    <a href="https://spellbook.legal" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Spellbook</div>
+                        <div class="tool-desc">AI contract drafting...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">76</span>
+                            <span class="tool-price">$99/mo</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <section class="category-section" data-category="education">
                 <div class="category-header">
                     <span class="category-icon">🎓</span>
                     <h2>Education</h2>
-                    <span class="category-count">2 tools</span>
+                    <span class="category-count">2</span>
                 </div>
-                <div class="tools-grid">
-                    <div class="tool tool-hot">
-                        <a href="https://duolingo.com" target="_blank">Duolingo</a>
-                        <div class="tool-desc">AI language learning</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                <div class="tools-row">
+                    
+                    <a href="https://duolingo.com" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Duolingo</div>
+                        <div class="tool-desc">AI language learning...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">82</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">82</span>
-                    </div>
-                    <div class="tool tool-hot">
-                        <a href="https://khanmigo.ai" target="_blank">Khanmigo</a>
-                        <div class="tool-desc">AI tutor by Khan Academy</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">$9/mo</span>
+                    </a>
+                    <a href="https://khanmigo.ai" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Khanmigo</div>
+                        <div class="tool-desc">AI tutor by Khan Academy...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">79</span>
+                            <span class="tool-price">$9/mo</span>
                         </div>
-                        <span class="tool-score">79</span>
-                    </div>
+                    </a>
                 </div>
-            </div>
-            <div class="category" data-category="3d">
+            </section>
+            <section class="category-section" data-category="3d">
                 <div class="category-header">
                     <span class="category-icon">🎮</span>
-                    <h2>3D & Game Dev</h2>
-                    <span class="category-count">3 tools</span>
+                    <h2>3D & Gaming</h2>
+                    <span class="category-count">3</span>
                 </div>
-                <div class="tools-grid">
-                    <div class="tool tool-hot">
-                        <a href="https://meshy.ai" target="_blank">Meshy</a>
-                        <div class="tool-desc">AI 3D model generation</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
+                <div class="tools-row">
+                    
+                    <a href="https://meshy.ai" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Meshy</div>
+                        <div class="tool-desc">AI 3D model generation...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">84</span>
+                            <span class="tool-price">Free tier</span>
                         </div>
-                        <span class="tool-score">84</span>
+                    </a>
+                    <a href="https://tripo3d.ai" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Tripo AI</div>
+                        <div class="tool-desc">Image to 3D model...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">84</span>
+                            <span class="tool-price">Free tier</span>
+                        </div>
+                    </a>
+                    <a href="https://lumalabs.ai" target="_blank" class="tool-card" data-tilt data-tilt-scale="1.02">
+                        <div class="tool-name">Luma AI</div>
+                        <div class="tool-desc">3D capture and generation...</div>
+                        <div class="tool-footer">
+                            <span class="tool-score">80</span>
+                            <span class="tool-price">Free tier</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            </div>
+        </section>
+        
+        <section class="graveyard-section">
+            <div class="container">
+                <div class="graveyard-header">
+                    <h2>☠️ The Graveyard</h2>
+                    <a href="graveyard.html" class="graveyard-link">View all 2 →</a>
+                </div>
+                <div class="graveyard-grid">
+                    
+                <div class="grave-card">
+                    <div class="grave-name">Copy.ai</div>
+                    <div class="grave-reason">SUPERSEDED</div>
+                </div>
+                <div class="grave-card">
+                    <div class="grave-name">Rytr</div>
+                    <div class="grave-reason">INACTIVITY</div>
+                </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="curate-section">
+            <div class="container">
+                <h2>How We Curate</h2>
+                <div class="curate-grid">
+                    <div class="curate-card">
+                        <div class="curate-icon">📡</div>
+                        <h3>Daily Scanning</h3>
+                        <p>Every morning at 6 AM, we scan GitHub, HackerNews, Product Hunt, and X for real activity signals.</p>
                     </div>
-                    <div class="tool tool-hot">
-                        <a href="https://tripo3d.ai" target="_blank">Tripo AI</a>
-                        <div class="tool-desc">Image to 3D model</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
-                        </div>
-                        <span class="tool-score">84</span>
+                    <div class="curate-card">
+                        <div class="curate-icon">📊</div>
+                        <h3>Activity Scoring</h3>
+                        <p>Tools are scored on commits, mentions, and buzz. No pay-to-play. No sponsored placements.</p>
                     </div>
-                    <div class="tool tool-hot">
-                        <a href="https://lumalabs.ai" target="_blank">Luma AI</a>
-                        <div class="tool-desc">3D capture and generation</div>
-                        <div class="tool-meta">
-                            <span class="tool-tag">Free tier</span>
-                        </div>
-                        <span class="tool-score">80</span>
+                    <div class="curate-card">
+                        <div class="curate-icon">☠️</div>
+                        <h3>Brutal Curation</h3>
+                        <p>60 days of silence = graveyard. We don't keep dead tools around to pad the numbers.</p>
+                    </div>
+                    <div class="curate-card">
+                        <div class="curate-icon">🎯</div>
+                        <h3>Builder-First</h3>
+                        <p>Every tool here is used by people shipping real products. Not enterprise demos. Not vaporware.</p>
                     </div>
                 </div>
             </div>
-
-        </div>
+        </section>
     </main>
-    
-    <section class="how-we-curate">
-        <div class="container">
-            <h3>🔍 How We Curate This List</h3>
-            <div class="curate-grid">
-                <div class="curate-item">
-                    <div class="curate-icon">📡</div>
-                    <h4>Daily Scanning</h4>
-                    <p>Every day at 6 AM, our AI agent scans GitHub trending, Hacker News, Product Hunt, and X/Twitter for AI tool activity.</p>
-                </div>
-                <div class="curate-item">
-                    <div class="curate-icon">📊</div>
-                    <h4>Activity Scoring</h4>
-                    <p>Each tool gets scored on recent GitHub commits, community mentions, funding news, and real builder usage. No pay-to-play.</p>
-                </div>
-                <div class="curate-item">
-                    <div class="curate-icon">☠️</div>
-                    <h4>Graveyard Rules</h4>
-                    <p>Tools with no activity for 60+ days get moved to the graveyard. No dead tools, no vaporware, no outdated recommendations.</p>
-                </div>
-                <div class="curate-item">
-                    <div class="curate-icon">🔄</div>
-                    <h4>Updated Daily</h4>
-                    <p>This list refreshes every morning. What you see is what builders are actually using right now, not what was hot in 2023.</p>
-                </div>
-            </div>
-        </div>
-    </section>
     
     <footer>
         <div class="container">
-            <p>Curated by <a href="https://thebuilderweekly.substack.com" target="_blank">The Builder Weekly</a></p>
-            <p style="margin-top: 12px; font-size: 0.85rem;">
-                <a href="https://instagram.com/thebuildrweekly" target="_blank">Instagram</a> · 
-                <a href="https://x.com/thebuildrweekly" target="_blank">X</a> · 
+            <p class="footer-brand">Curated by <a href="https://thebuilderweekly.substack.com" target="_blank">The Builder Weekly</a></p>
+            <div class="footer-links">
+                <a href="https://instagram.com/thebuildrweekly" target="_blank">Instagram</a>
+                <a href="https://x.com/thebuildrweekly" target="_blank">X</a>
                 <a href="https://youtube.com/@thebuilderweekly" target="_blank">YouTube</a>
-            </p>
-            <div class="graveyard-link">
-                <a href="graveyard.html">View the Graveyard</a> (2 tools that didn't make it)
             </div>
         </div>
     </footer>
     
     <script>
+        // Search functionality
         const search = document.getElementById('search');
-        const categories = document.querySelectorAll('.category');
+        const categories = document.querySelectorAll('.category-section');
+        const bentoCards = document.querySelectorAll('.bento-card');
+        
         search.addEventListener('input', (e) => {
             const q = e.target.value.toLowerCase();
+            
+            // Filter bento cards
+            bentoCards.forEach(card => {
+                const match = card.textContent.toLowerCase().includes(q);
+                card.style.display = match ? '' : 'none';
+            });
+            
+            // Filter category cards
             categories.forEach(cat => {
                 let visible = 0;
-                cat.querySelectorAll('.tool').forEach(tool => {
+                cat.querySelectorAll('.tool-card').forEach(tool => {
                     const match = tool.textContent.toLowerCase().includes(q);
-                    tool.classList.toggle('hidden', !match);
+                    tool.style.display = match ? '' : 'none';
                     if (match) visible++;
                 });
-                cat.classList.toggle('hidden', visible === 0);
+                cat.style.display = visible === 0 && q ? 'none' : '';
+            });
+        });
+        
+        // Simple tilt effect
+        document.querySelectorAll('[data-tilt]').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 20;
+                const rotateY = (centerX - x) / 20;
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
             });
         });
     </script>
