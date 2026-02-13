@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation Criteria | Top AI Tools of 2026</title>
+    <meta name="description" content="How we score and rank AI tools. Transparent, signal-based, no pay-to-play.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --yellow: #FFF67F;
+            --yellow-dim: #FFF67F22;
+            --bg: #000000;
+            --bg-card: #141414;
+            --bg-elevated: #1a1a1a;
+            --text: #e5e5e5;
+            --text-dim: #777;
+            --border: #2a2a2a;
+            --glow: rgba(255, 246, 127, 0.15);
+            --green: #22c55e;
+            --red: #ef4444;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+        
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+        
+        /* Header */
+        header {
+            padding: 40px 0 30px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            text-decoration: none;
+            margin-bottom: 20px;
+            transition: color 0.2s;
+        }
+        
+        .back-link:hover { color: var(--yellow); }
+        
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        h1 span {
+            background: linear-gradient(135deg, var(--yellow) 0%, #FFD700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            font-size: 1rem;
+            color: var(--text-dim);
+        }
+        
+        /* Content */
+        main {
+            padding: 40px 0 60px;
+        }
+        
+        section {
+            margin-bottom: 48px;
+        }
+        
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--yellow);
+        }
+        
+        h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 24px 0 12px;
+        }
+        
+        p {
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+        
+        .formula-box {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 20px 0;
+            font-family: 'SF Mono', Consolas, monospace;
+            font-size: 0.95rem;
+        }
+        
+        .formula-box code {
+            color: var(--yellow);
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+        
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        th {
+            font-weight: 600;
+            color: var(--text-dim);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        td:first-child {
+            color: var(--text);
+        }
+        
+        .points-positive {
+            color: var(--green);
+            font-weight: 600;
+        }
+        
+        .points-negative {
+            color: var(--red);
+            font-weight: 600;
+        }
+        
+        /* State cards */
+        .states-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin: 20px 0;
+        }
+        
+        .state-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .state-card.active { border-color: var(--green); }
+        .state-card.watchlist { border-color: #f59e0b; }
+        .state-card.graveyard { border-color: var(--red); }
+        
+        .state-icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+        
+        .state-name {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .state-threshold {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+        }
+        
+        /* Callout */
+        .callout {
+            background: rgba(255, 246, 127, 0.08);
+            border: 1px solid var(--yellow-dim);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+        
+        .callout-title {
+            font-weight: 600;
+            color: var(--yellow);
+            margin-bottom: 8px;
+        }
+        
+        .callout p {
+            margin: 0;
+            color: var(--text-dim);
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid var(--border);
+        }
+        
+        .footer-brand {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+        }
+        
+        .footer-brand a { color: var(--yellow); text-decoration: none; }
+        
+        @media (max-width: 600px) {
+            .states-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            table {
+                font-size: 0.8rem;
+            }
+            
+            th, td {
+                padding: 10px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to Directory</a>
+            <h1><span>Evaluation Criteria</span></h1>
+            <p class="subtitle">How we score and rank AI tools. Transparent, signal-based, no pay-to-play.</p>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <section>
+                <h2>The Formula</h2>
+                <p>Every tool gets a combined score from 0-100 based on real activity signals and builder utility.</p>
+                
+                <div class="formula-box">
+                    <code>combined_score</code> = (<code>activity_score</code> × 0.6) + (<code>relevance_score</code> × 0.4)
+                </div>
+                
+                <p>Tools need a combined score of <strong>40 or higher</strong> to be listed. No exceptions.</p>
+            </section>
+            
+            <section>
+                <h2>Activity Score (60% weight)</h2>
+                <p>We scan GitHub, HackerNews, Product Hunt, and X every day at 6 AM PST. Real signals, not marketing spend.</p>
+                
+                <h3>Positive Signals</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Signal</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Product Hunt featured launch (30 days)</td>
+                            <td class="points-positive">+50</td>
+                        </tr>
+                        <tr>
+                            <td>GitHub trending</td>
+                            <td class="points-positive">+40</td>
+                        </tr>
+                        <tr>
+                            <td>Hacker News front page</td>
+                            <td class="points-positive">+35</td>
+                        </tr>
+                        <tr>
+                            <td>Product Hunt 500+ upvotes</td>
+                            <td class="points-positive">+30</td>
+                        </tr>
+                        <tr>
+                            <td>New funding round announced</td>
+                            <td class="points-positive">+30</td>
+                        </tr>
+                        <tr>
+                            <td>GitHub active commits (10+ in 30 days)</td>
+                            <td class="points-positive">+25</td>
+                        </tr>
+                        <tr>
+                            <td>GitHub stars gained (30 days)</td>
+                            <td class="points-positive">up to +20</td>
+                        </tr>
+                        <tr>
+                            <td>Google Trends rising interest</td>
+                            <td class="points-positive">+20</td>
+                        </tr>
+                        <tr>
+                            <td>X mentions by builders (1K+ followers)</td>
+                            <td class="points-positive">+15/mention (max 45)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Decay Penalties</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Condition</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>No signals for 30+ days</td>
+                            <td class="points-negative">-25</td>
+                        </tr>
+                        <tr>
+                            <td>No signals for 60+ days</td>
+                            <td class="points-negative">-50</td>
+                        </tr>
+                        <tr>
+                            <td>Confirmed shutdown</td>
+                            <td class="points-negative">-100</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <section>
+                <h2>Relevance Score (40% weight)</h2>
+                <p>How useful is this tool for builders shipping real products?</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Factor</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>High-value category (coding, automation, agents, productivity)</td>
+                            <td class="points-positive">+25</td>
+                        </tr>
+                        <tr>
+                            <td>Other categories</td>
+                            <td class="points-positive">+15</td>
+                        </tr>
+                        <tr>
+                            <td>Working product (not waitlist)</td>
+                            <td class="points-positive">+20-25</td>
+                        </tr>
+                        <tr>
+                            <td>Free tier available</td>
+                            <td class="points-positive">+20</td>
+                        </tr>
+                        <tr>
+                            <td>Affordable pricing ($10-30/mo)</td>
+                            <td class="points-positive">+15</td>
+                        </tr>
+                        <tr>
+                            <td>Hot/trending tags</td>
+                            <td class="points-positive">+10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <section>
+                <h2>Tool States</h2>
+                <p>Tools move between states based on their combined score.</p>
+                
+                <div class="states-grid">
+                    <div class="state-card active">
+                        <div class="state-icon">✅</div>
+                        <div class="state-name">Active</div>
+                        <div class="state-threshold">Score ≥ 40</div>
+                    </div>
+                    <div class="state-card watchlist">
+                        <div class="state-icon">⚠️</div>
+                        <div class="state-name">Watchlist</div>
+                        <div class="state-threshold">Score 25-39</div>
+                    </div>
+                    <div class="state-card graveyard">
+                        <div class="state-icon">☠️</div>
+                        <div class="state-name">Graveyard</div>
+                        <div class="state-threshold">Score < 25 for 14 days</div>
+                    </div>
+                </div>
+                
+                <p>Tools on the watchlist get a 14-day grace period. If they don't recover above 40, they're moved to the graveyard with a reason (INACTIVITY, SHUTDOWN, SUPERSEDED, etc).</p>
+            </section>
+            
+            <section>
+                <h2>Graveyard Reasons</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Reason</th>
+                            <th>What It Means</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>INACTIVITY</td>
+                            <td>No signals for 60+ days</td>
+                        </tr>
+                        <tr>
+                            <td>SHUTDOWN</td>
+                            <td>Company closed operations</td>
+                        </tr>
+                        <tr>
+                            <td>ACQUIRED</td>
+                            <td>Acquired and deprecated</td>
+                        </tr>
+                        <tr>
+                            <td>SUPERSEDED</td>
+                            <td>Better alternatives emerged</td>
+                        </tr>
+                        <tr>
+                            <td>PIVOTED</td>
+                            <td>No longer AI-focused</td>
+                        </tr>
+                        <tr>
+                            <td>VAPORWARE</td>
+                            <td>Never delivered on promises</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <div class="callout">
+                <div class="callout-title">No Pay-to-Play</div>
+                <p>We don't accept payment for listings or rankings. Every tool earns its spot through real activity signals. This directory is curated autonomously by AI based on what builders are actually using.</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p class="footer-brand">Curated by <a href="https://thebuilderweekly.substack.com" target="_blank">The Builder Weekly</a></p>
+        </div>
+    </footer>
+</body>
+</html>
