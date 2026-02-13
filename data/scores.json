@@ -1,0 +1,471 @@
+{
+  "timestamp": "2026-02-13T08:32:22.199721",
+  "scores": [
+    {
+      "id": "mem",
+      "name": "Mem",
+      "combined": 75.9
+    },
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "combined": 75.2
+    },
+    {
+      "id": "bolt",
+      "name": "Bolt",
+      "combined": 75.1
+    },
+    {
+      "id": "reclaim",
+      "name": "Reclaim.ai",
+      "combined": 73.6
+    },
+    {
+      "id": "grammarly",
+      "name": "Grammarly",
+      "combined": 68.0
+    },
+    {
+      "id": "lex",
+      "name": "Lex",
+      "combined": 63.5
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "combined": 62.0
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "combined": 62.0
+    },
+    {
+      "id": "v0",
+      "name": "v0",
+      "combined": 62.0
+    },
+    {
+      "id": "windsurf",
+      "name": "Windsurf",
+      "combined": 62.0
+    },
+    {
+      "id": "aider",
+      "name": "Aider",
+      "combined": 62.0
+    },
+    {
+      "id": "lovable",
+      "name": "Lovable",
+      "combined": 62.0
+    },
+    {
+      "id": "granola",
+      "name": "Granola",
+      "combined": 62.0
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "combined": 62.0
+    },
+    {
+      "id": "clay",
+      "name": "Clay",
+      "combined": 62.0
+    },
+    {
+      "id": "browserbase",
+      "name": "Browserbase",
+      "combined": 62.0
+    },
+    {
+      "id": "replit-agent",
+      "name": "Replit Agent",
+      "combined": 60.0
+    },
+    {
+      "id": "devin",
+      "name": "Devin",
+      "combined": 58.0
+    },
+    {
+      "id": "ideogram",
+      "name": "Ideogram",
+      "combined": 58.0
+    },
+    {
+      "id": "flux",
+      "name": "Flux",
+      "combined": 58.0
+    },
+    {
+      "id": "krea",
+      "name": "Krea AI",
+      "combined": 58.0
+    },
+    {
+      "id": "recraft",
+      "name": "Recraft",
+      "combined": 58.0
+    },
+    {
+      "id": "pika",
+      "name": "Pika",
+      "combined": 58.0
+    },
+    {
+      "id": "kling",
+      "name": "Kling AI",
+      "combined": 58.0
+    },
+    {
+      "id": "luma-dream",
+      "name": "Luma Dream Machine",
+      "combined": 58.0
+    },
+    {
+      "id": "opus-clip",
+      "name": "Opus Clip",
+      "combined": 58.0
+    },
+    {
+      "id": "elevenlabs",
+      "name": "ElevenLabs",
+      "combined": 58.0
+    },
+    {
+      "id": "suno",
+      "name": "Suno",
+      "combined": 58.0
+    },
+    {
+      "id": "udio",
+      "name": "Udio",
+      "combined": 58.0
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "combined": 58.0
+    },
+    {
+      "id": "notebook-lm",
+      "name": "NotebookLM",
+      "combined": 58.0
+    },
+    {
+      "id": "otter",
+      "name": "Otter.ai",
+      "combined": 58.0
+    },
+    {
+      "id": "fireflies",
+      "name": "Fireflies.ai",
+      "combined": 58.0
+    },
+    {
+      "id": "tldv",
+      "name": "tl;dv",
+      "combined": 58.0
+    },
+    {
+      "id": "zapier-ai",
+      "name": "Zapier AI",
+      "combined": 58.0
+    },
+    {
+      "id": "make",
+      "name": "Make",
+      "combined": 58.0
+    },
+    {
+      "id": "bardeen",
+      "name": "Bardeen",
+      "combined": 58.0
+    },
+    {
+      "id": "framer-ai",
+      "name": "Framer",
+      "combined": 58.0
+    },
+    {
+      "id": "hex",
+      "name": "Hex",
+      "combined": 58.0
+    },
+    {
+      "id": "julius",
+      "name": "Julius",
+      "combined": 58.0
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "combined": 58.0
+    },
+    {
+      "id": "poe",
+      "name": "Poe",
+      "combined": 58.0
+    },
+    {
+      "id": "character-ai",
+      "name": "Character.AI",
+      "combined": 58.0
+    },
+    {
+      "id": "grok",
+      "name": "Grok",
+      "combined": 58.0
+    },
+    {
+      "id": "meshy",
+      "name": "Meshy",
+      "combined": 58.0
+    },
+    {
+      "id": "tripo",
+      "name": "Tripo AI",
+      "combined": 58.0
+    },
+    {
+      "id": "exa",
+      "name": "Exa",
+      "combined": 58.0
+    },
+    {
+      "id": "tavily",
+      "name": "Tavily",
+      "combined": 58.0
+    },
+    {
+      "id": "linear",
+      "name": "Linear",
+      "combined": 58.0
+    },
+    {
+      "id": "multion",
+      "name": "MultiOn",
+      "combined": 58.0
+    },
+    {
+      "id": "operator",
+      "name": "Operator",
+      "combined": 58.0
+    },
+    {
+      "id": "github-copilot",
+      "name": "GitHub Copilot",
+      "combined": 56.0
+    },
+    {
+      "id": "runway",
+      "name": "Runway",
+      "combined": 56.0
+    },
+    {
+      "id": "notion-ai",
+      "name": "Notion AI",
+      "combined": 56.0
+    },
+    {
+      "id": "leonardo",
+      "name": "Leonardo.ai",
+      "combined": 54.0
+    },
+    {
+      "id": "descript",
+      "name": "Descript",
+      "combined": 54.0
+    },
+    {
+      "id": "captions",
+      "name": "Captions",
+      "combined": 54.0
+    },
+    {
+      "id": "elicit",
+      "name": "Elicit",
+      "combined": 54.0
+    },
+    {
+      "id": "consensus",
+      "name": "Consensus",
+      "combined": 54.0
+    },
+    {
+      "id": "intercom-fin",
+      "name": "Intercom Fin",
+      "combined": 54.0
+    },
+    {
+      "id": "tidio",
+      "name": "Tidio",
+      "combined": 54.0
+    },
+    {
+      "id": "chatbase",
+      "name": "Chatbase",
+      "combined": 54.0
+    },
+    {
+      "id": "canva",
+      "name": "Canva",
+      "combined": 54.0
+    },
+    {
+      "id": "figma-ai",
+      "name": "Figma AI",
+      "combined": 54.0
+    },
+    {
+      "id": "uizard",
+      "name": "Uizard",
+      "combined": 54.0
+    },
+    {
+      "id": "wordtune",
+      "name": "Wordtune",
+      "combined": 54.0
+    },
+    {
+      "id": "apollo",
+      "name": "Apollo",
+      "combined": 54.0
+    },
+    {
+      "id": "lavender",
+      "name": "Lavender",
+      "combined": 54.0
+    },
+    {
+      "id": "ramp",
+      "name": "Ramp",
+      "combined": 54.0
+    },
+    {
+      "id": "brex",
+      "name": "Brex",
+      "combined": 54.0
+    },
+    {
+      "id": "buffer",
+      "name": "Buffer",
+      "combined": 54.0
+    },
+    {
+      "id": "duolingo",
+      "name": "Duolingo",
+      "combined": 54.0
+    },
+    {
+      "id": "luma-3d",
+      "name": "Luma AI",
+      "combined": 54.0
+    },
+    {
+      "id": "midjourney",
+      "name": "Midjourney",
+      "combined": 52.0
+    },
+    {
+      "id": "heygen",
+      "name": "HeyGen",
+      "combined": 52.0
+    },
+    {
+      "id": "synthesia",
+      "name": "Synthesia",
+      "combined": 52.0
+    },
+    {
+      "id": "harvey",
+      "name": "Harvey",
+      "combined": 52.0
+    },
+    {
+      "id": "adcreative",
+      "name": "AdCreative.ai",
+      "combined": 52.0
+    },
+    {
+      "id": "dalle3",
+      "name": "DALL-E 3",
+      "combined": 50.0
+    },
+    {
+      "id": "play-ht",
+      "name": "Play.ht",
+      "combined": 50.0
+    },
+    {
+      "id": "resemble",
+      "name": "Resemble AI",
+      "combined": 50.0
+    },
+    {
+      "id": "magician",
+      "name": "Magician",
+      "combined": 50.0
+    },
+    {
+      "id": "jasper",
+      "name": "Jasper",
+      "combined": 50.0
+    },
+    {
+      "id": "akkio",
+      "name": "Akkio",
+      "combined": 50.0
+    },
+    {
+      "id": "spellbook",
+      "name": "Spellbook",
+      "combined": 50.0
+    },
+    {
+      "id": "taplio",
+      "name": "Taplio",
+      "combined": 50.0
+    },
+    {
+      "id": "tweethunter",
+      "name": "Tweet Hunter",
+      "combined": 50.0
+    },
+    {
+      "id": "pencil",
+      "name": "Pencil",
+      "combined": 50.0
+    },
+    {
+      "id": "khanmigo",
+      "name": "Khanmigo",
+      "combined": 50.0
+    },
+    {
+      "id": "writer",
+      "name": "Writer",
+      "combined": 48.0
+    },
+    {
+      "id": "gong",
+      "name": "Gong",
+      "combined": 48.0
+    },
+    {
+      "id": "outreach",
+      "name": "Outreach",
+      "combined": 48.0
+    },
+    {
+      "id": "typeface",
+      "name": "Typeface",
+      "combined": 48.0
+    }
+  ],
+  "state_changes": []
+}

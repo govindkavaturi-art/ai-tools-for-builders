@@ -1,0 +1,47 @@
+{
+  "fetched_at": "2026-02-13T08:32:22.190604",
+  "stories": [
+    {
+      "id": 47000041,
+      "title": "MinIO repository is no longer maintained",
+      "url": "https://github.com/minio/minio/commit/7aac2a2c5b7c882e68c1ce017d8256be2feea27f",
+      "score": 369,
+      "time": 1770968763
+    },
+    {
+      "id": 46992553,
+      "title": "GPT\u20115.3\u2011Codex\u2011Spark",
+      "url": "https://openai.com/index/introducing-gpt-5-3-codex-spark/",
+      "score": 822,
+      "time": 1770919569
+    },
+    {
+      "id": 47001968,
+      "title": "Gauntlet AI (YC S17) train you to master building with AI, give you $200k+ job",
+      "url": "http://qualify.gauntletAI.com",
+      "score": 1,
+      "time": 1770985925
+    },
+    {
+      "id": 46990729,
+      "title": "An AI agent published a hit piece on me",
+      "url": "https://theshamblog.com/an-ai-agent-published-a-hit-piece-on-me/",
+      "score": 2090,
+      "time": 1770913404
+    },
+    {
+      "id": 46988596,
+      "title": "Improving 15 LLMs at Coding in One Afternoon. Only the Harness Changed",
+      "url": "http://blog.can.ac/2026/02/12/the-harness-problem/",
+      "score": 745,
+      "time": 1770903020
+    },
+    {
+      "id": 46989217,
+      "title": "Major European payment processor can't send email to Google Workspace users",
+      "url": "https://atha.io/blog/2026-02-12-viva",
+      "score": 576,
+      "time": 1770906255
+    }
+  ]
+}
