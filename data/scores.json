@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-13T08:32:22.199721",
+  "timestamp": "2026-02-24T06:05:10.447677",
   "scores": [
     {
       "id": "mem",
@@ -85,6 +85,11 @@
       "id": "replit-agent",
       "name": "Replit Agent",
       "combined": 60.0
+    },
+    {
+      "id": "grok",
+      "name": "Grok",
+      "combined": 58.8
     },
     {
       "id": "devin",
@@ -214,11 +219,6 @@
     {
       "id": "character-ai",
       "name": "Character.AI",
-      "combined": 58.0
-    },
-    {
-      "id": "grok",
-      "name": "Grok",
       "combined": 58.0
     },
     {

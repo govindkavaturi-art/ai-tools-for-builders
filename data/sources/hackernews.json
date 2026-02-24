@@ -1,47 +1,54 @@
 {
-  "fetched_at": "2026-02-13T08:32:22.190604",
+  "fetched_at": "2026-02-24T06:05:10.436223",
   "stories": [
     {
-      "id": 47000041,
-      "title": "MinIO repository is no longer maintained",
-      "url": "https://github.com/minio/minio/commit/7aac2a2c5b7c882e68c1ce017d8256be2feea27f",
-      "score": 369,
-      "time": 1770968763
+      "id": 47133055,
+      "title": "Show HN: enveil \u2013 hide your .env secrets from prAIng eyes",
+      "url": "https://github.com/GreatScott/enveil",
+      "score": 131,
+      "time": 1771909490
     },
     {
-      "id": 46992553,
-      "title": "GPT\u20115.3\u2011Codex\u2011Spark",
-      "url": "https://openai.com/index/introducing-gpt-5-3-codex-spark/",
-      "score": 822,
-      "time": 1770919569
+      "id": 47131225,
+      "title": "Show HN: Steerling-8B, a language model that can explain any token it generates",
+      "url": "https://www.guidelabs.ai/post/steerling-8b-base-model-release/",
+      "score": 225,
+      "time": 1771893482
     },
     {
-      "id": 47001968,
-      "title": "Gauntlet AI (YC S17) train you to master building with AI, give you $200k+ job",
-      "url": "http://qualify.gauntletAI.com",
-      "score": 1,
-      "time": 1770985925
+      "id": 47133313,
+      "title": "Firefox 148 Launches with AI Kill Switch Feature and More Enhancements",
+      "url": "https://serverhost.com/blog/firefox-148-launches-with-exciting-ai-kill-switch-feature-and-more-enhancements/",
+      "score": 339,
+      "time": 1771912043
     },
     {
-      "id": 46990729,
-      "title": "An AI agent published a hit piece on me",
-      "url": "https://theshamblog.com/an-ai-agent-published-a-hit-piece-on-me/",
-      "score": 2090,
-      "time": 1770913404
+      "id": 47129727,
+      "title": "Making Wolfram tech available as a foundation tool for LLM systems",
+      "url": "https://writings.stephenwolfram.com/2026/02/making-wolfram-tech-available-as-a-foundation-tool-for-llm-systems/",
+      "score": 216,
+      "time": 1771884694
     },
     {
-      "id": 46988596,
-      "title": "Improving 15 LLMs at Coding in One Afternoon. Only the Harness Changed",
-      "url": "http://blog.can.ac/2026/02/12/the-harness-problem/",
-      "score": 745,
-      "time": 1770903020
+      "id": 47128138,
+      "title": "\u201cCar Wash\u201d test with 53 models",
+      "url": "https://opper.ai/blog/car-wash-test",
+      "score": 288,
+      "time": 1771877768
     },
     {
-      "id": 46989217,
-      "title": "Major European payment processor can't send email to Google Workspace users",
-      "url": "https://atha.io/blog/2026-02-12-viva",
-      "score": 576,
-      "time": 1770906255
+      "id": 47120899,
+      "title": "Ladybird adopts Rust, with help from AI",
+      "url": "https://ladybird.org/posts/adopting-rust/",
+      "score": 1208,
+      "time": 1771846162
+    },
+    {
+      "id": 47136477,
+      "title": "xAI and Pentagon reach deal to use Grok in classified systems",
+      "url": "https://www.axios.com/2026/02/23/ai-defense-department-deal-musk-xai-grok",
+      "score": 13,
+      "time": 1771937509
     }
   ]
 }
