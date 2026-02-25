@@ -2,6 +2,10 @@
 
 Daily updates to the directory.
 
+## 2026-02-25
+
+- Daily refresh, no state changes
+
 ## 2026-02-24
 
 - Daily refresh, no state changes

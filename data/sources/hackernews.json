@@ -1,54 +1,75 @@
 {
-  "fetched_at": "2026-02-24T06:05:10.436223",
+  "fetched_at": "2026-02-25T06:03:31.415852",
   "stories": [
     {
-      "id": 47133055,
-      "title": "Show HN: enveil \u2013 hide your .env secrets from prAIng eyes",
-      "url": "https://github.com/GreatScott/enveil",
-      "score": 131,
-      "time": 1771909490
+      "id": 47151233,
+      "title": "Never Buy A .online Domain",
+      "url": "https://www.0xsid.com/blog/online-tld-is-pain",
+      "score": 129,
+      "time": 1772026277
     },
     {
-      "id": 47131225,
-      "title": "Show HN: Steerling-8B, a language model that can explain any token it generates",
-      "url": "https://www.guidelabs.ai/post/steerling-8b-base-model-release/",
-      "score": 225,
-      "time": 1771893482
+      "id": 47149586,
+      "title": "Show HN: A real-time strategy game that AI agents can play",
+      "url": "https://llmskirmish.com/",
+      "score": 103,
+      "time": 1772013765
     },
     {
-      "id": 47133313,
-      "title": "Firefox 148 Launches with AI Kill Switch Feature and More Enhancements",
-      "url": "https://serverhost.com/blog/firefox-148-launches-with-exciting-ai-kill-switch-feature-and-more-enhancements/",
-      "score": 339,
-      "time": 1771912043
+      "id": 47151000,
+      "title": "AIs can't stop recommending nuclear strikes in war game simulations",
+      "url": "https://www.newscientist.com/article/2516885-ais-cant-stop-recommending-nuclear-strikes-in-war-game-simulations/",
+      "score": 24,
+      "time": 1772024856
     },
     {
-      "id": 47129727,
-      "title": "Making Wolfram tech available as a foundation tool for LLM systems",
-      "url": "https://writings.stephenwolfram.com/2026/02/making-wolfram-tech-available-as-a-foundation-tool-for-llm-systems/",
-      "score": 216,
-      "time": 1771884694
+      "id": 47149151,
+      "title": "LLM=True",
+      "url": "https://blog.codemine.be/posts/2026/20260222-be-quiet/",
+      "score": 153,
+      "time": 1772010340
     },
     {
-      "id": 47128138,
-      "title": "\u201cCar Wash\u201d test with 53 models",
-      "url": "https://opper.ai/blog/car-wash-test",
-      "score": 288,
-      "time": 1771877768
+      "id": 47148454,
+      "title": "Claude Code Remote Control",
+      "url": "https://code.claude.com/docs/en/remote-control",
+      "score": 147,
+      "time": 1772004176
     },
     {
-      "id": 47120899,
-      "title": "Ladybird adopts Rust, with help from AI",
-      "url": "https://ladybird.org/posts/adopting-rust/",
-      "score": 1208,
-      "time": 1771846162
+      "id": 47144464,
+      "title": "Mercury 2: Fast reasoning LLM powered by diffusion",
+      "url": "https://www.inceptionlabs.ai/blog/introducing-mercury-2",
+      "score": 266,
+      "time": 1771973183
     },
     {
-      "id": 47136477,
-      "title": "xAI and Pentagon reach deal to use Grok in classified systems",
-      "url": "https://www.axios.com/2026/02/23/ai-defense-department-deal-musk-xai-grok",
-      "score": 13,
-      "time": 1771937509
+      "id": 47143755,
+      "title": "Show HN: Moonshine Open-Weights STT models \u2013 higher accuracy than WhisperLargev3",
+      "url": "https://github.com/moonshine-ai/moonshine",
+      "score": 273,
+      "time": 1771970047
+    },
+    {
+      "id": 47140322,
+      "title": "Show HN: Emdash \u2013 Open-source agentic development environment",
+      "url": "https://github.com/generalaction/emdash",
+      "score": 176,
+      "time": 1771956037
+    },
+    {
+      "id": 47144325,
+      "title": "Cell Service for the Fairly Paranoid",
+      "url": "https://www.cape.co/",
+      "score": 126,
+      "time": 1771972674
+    },
+    {
+      "id": 47145963,
+      "title": "Anthropic Drops Flagship Safety Pledge",
+      "url": "https://time.com/7380854/exclusive-anthropic-drops-flagship-safety-pledge/",
+      "score": 444,
+      "time": 1771981726
     }
   ]
 }

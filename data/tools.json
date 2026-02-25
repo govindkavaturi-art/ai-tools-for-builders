@@ -74,6 +74,25 @@
       }
     },
     {
+      "id": "claude",
+      "name": "Claude",
+      "url": "https://claude.ai",
+      "category": "agents",
+      "description": "Anthropic's AI assistant",
+      "pricing": "Free tier",
+      "state": "ACTIVE",
+      "tags": [
+        "hot"
+      ],
+      "added_date": "2026-02-12",
+      "last_signal_date": "2026-02-12",
+      "scores": {
+        "activity": 64.7,
+        "relevance": 80,
+        "combined": 70.8
+      }
+    },
+    {
       "id": "grammarly",
       "name": "Grammarly",
       "url": "https://grammarly.com",
@@ -118,25 +137,6 @@
       "tags": [
         "hot",
         "coding"
-      ],
-      "added_date": "2026-02-12",
-      "last_signal_date": "2026-02-12",
-      "scores": {
-        "activity": 50,
-        "relevance": 80,
-        "combined": 62.0
-      }
-    },
-    {
-      "id": "claude",
-      "name": "Claude",
-      "url": "https://claude.ai",
-      "category": "agents",
-      "description": "Anthropic's AI assistant",
-      "pricing": "Free tier",
-      "state": "ACTIVE",
-      "tags": [
-        "hot"
       ],
       "added_date": "2026-02-12",
       "last_signal_date": "2026-02-12",
@@ -336,9 +336,9 @@
       "added_date": "2026-02-12",
       "last_signal_date": "2026-02-12",
       "scores": {
-        "activity": 51.3,
+        "activity": 50,
         "relevance": 70,
-        "combined": 58.8
+        "combined": 58.0
       }
     },
     {
