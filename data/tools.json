@@ -74,25 +74,6 @@
       }
     },
     {
-      "id": "claude",
-      "name": "Claude",
-      "url": "https://claude.ai",
-      "category": "agents",
-      "description": "Anthropic's AI assistant",
-      "pricing": "Free tier",
-      "state": "ACTIVE",
-      "tags": [
-        "hot"
-      ],
-      "added_date": "2026-02-12",
-      "last_signal_date": "2026-02-12",
-      "scores": {
-        "activity": 64.7,
-        "relevance": 80,
-        "combined": 70.8
-      }
-    },
-    {
       "id": "grammarly",
       "name": "Grammarly",
       "url": "https://grammarly.com",
@@ -124,6 +105,25 @@
         "activity": 72.5,
         "relevance": 50,
         "combined": 63.5
+      }
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "url": "https://claude.ai",
+      "category": "agents",
+      "description": "Anthropic's AI assistant",
+      "pricing": "Free tier",
+      "state": "ACTIVE",
+      "tags": [
+        "hot"
+      ],
+      "added_date": "2026-02-12",
+      "last_signal_date": "2026-02-12",
+      "scores": {
+        "activity": 50,
+        "relevance": 80,
+        "combined": 62.0
       }
     },
     {
@@ -320,6 +320,23 @@
         "activity": 50,
         "relevance": 75,
         "combined": 60.0
+      }
+    },
+    {
+      "id": "make",
+      "name": "Make",
+      "url": "https://make.com",
+      "category": "automation",
+      "description": "Visual automation platform",
+      "pricing": "Free tier",
+      "state": "ACTIVE",
+      "tags": [],
+      "added_date": "2026-02-12",
+      "last_signal_date": "2026-02-12",
+      "scores": {
+        "activity": 51.9,
+        "relevance": 70,
+        "combined": 59.1
       }
     },
     {
@@ -667,23 +684,6 @@
       "url": "https://zapier.com/ai",
       "category": "automation",
       "description": "AI workflow automation",
-      "pricing": "Free tier",
-      "state": "ACTIVE",
-      "tags": [],
-      "added_date": "2026-02-12",
-      "last_signal_date": "2026-02-12",
-      "scores": {
-        "activity": 50,
-        "relevance": 70,
-        "combined": 58.0
-      }
-    },
-    {
-      "id": "make",
-      "name": "Make",
-      "url": "https://make.com",
-      "category": "automation",
-      "description": "Visual automation platform",
       "pricing": "Free tier",
       "state": "ACTIVE",
       "tags": [],
