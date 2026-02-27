@@ -1,6 +1,11 @@
 {
-  "timestamp": "2026-02-26T06:02:24.499114",
+  "timestamp": "2026-02-27T06:02:02.307947",
   "scores": [
+    {
+      "id": "claude",
+      "name": "Claude",
+      "combined": 83.0
+    },
     {
       "id": "mem",
       "name": "Mem",
@@ -30,11 +35,6 @@
       "id": "lex",
       "name": "Lex",
       "combined": 63.5
-    },
-    {
-      "id": "claude",
-      "name": "Claude",
-      "combined": 62.0
     },
     {
       "id": "cursor",
@@ -89,7 +89,7 @@
     {
       "id": "make",
       "name": "Make",
-      "combined": 59.1
+      "combined": 58.0
     },
     {
       "id": "grok",

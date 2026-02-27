@@ -1,6 +1,25 @@
 {
   "tools": [
     {
+      "id": "claude",
+      "name": "Claude",
+      "url": "https://claude.ai",
+      "category": "agents",
+      "description": "Anthropic's AI assistant",
+      "pricing": "Free tier",
+      "state": "ACTIVE",
+      "tags": [
+        "hot"
+      ],
+      "added_date": "2026-02-12",
+      "last_signal_date": "2026-02-12",
+      "scores": {
+        "activity": 85,
+        "relevance": 80,
+        "combined": 83.0
+      }
+    },
+    {
       "id": "mem",
       "name": "Mem",
       "url": "https://mem.ai",
@@ -105,25 +124,6 @@
         "activity": 72.5,
         "relevance": 50,
         "combined": 63.5
-      }
-    },
-    {
-      "id": "claude",
-      "name": "Claude",
-      "url": "https://claude.ai",
-      "category": "agents",
-      "description": "Anthropic's AI assistant",
-      "pricing": "Free tier",
-      "state": "ACTIVE",
-      "tags": [
-        "hot"
-      ],
-      "added_date": "2026-02-12",
-      "last_signal_date": "2026-02-12",
-      "scores": {
-        "activity": 50,
-        "relevance": 80,
-        "combined": 62.0
       }
     },
     {
@@ -334,9 +334,9 @@
       "added_date": "2026-02-12",
       "last_signal_date": "2026-02-12",
       "scores": {
-        "activity": 51.9,
+        "activity": 50,
         "relevance": 70,
-        "combined": 59.1
+        "combined": 58.0
       }
     },
     {

@@ -1,75 +1,33 @@
 {
-  "fetched_at": "2026-02-26T06:02:24.482081",
+  "fetched_at": "2026-02-27T06:02:02.304431",
   "stories": [
     {
-      "id": 47165046,
-      "title": "Show HN: Agent Swarm \u2013 Multi-agent self-learning teams (OSS)",
-      "url": "https://github.com/desplega-ai/agent-swarm",
-      "score": 30,
-      "time": 1772108138
+      "id": 47179553,
+      "title": "PostmarketOS in 2026-02: generic kernels, bans use of generative AI",
+      "url": "https://postmarketos.org/blog/2026/02/26/pmOS-update-2026-02/",
+      "score": 37,
+      "time": 1772193696
     },
     {
-      "id": 47165299,
-      "title": "Fentanyl makeover: Core structural redesign could lead to safer pain medications",
-      "url": "https://www.scripps.edu/news-and-events/press-room/2026/20260211-janda-molecule.html",
-      "score": 19,
-      "time": 1772109868
+      "id": 47169757,
+      "title": "What Claude Code chooses",
+      "url": "https://amplifying.ai/research/claude-code-picks",
+      "score": 485,
+      "time": 1772129546
     },
     {
-      "id": 47165397,
-      "title": "Anthropic ditches its core safety promise",
-      "url": "https://www.cnn.com/2026/02/25/tech/anthropic-safety-policy-change",
-      "score": 71,
-      "time": 1772110370
+      "id": 47167763,
+      "title": "AirSnitch: Demystifying and breaking client isolation in Wi-Fi networks [pdf]",
+      "url": "https://www.ndss-symposium.org/wp-content/uploads/2026-f1282-paper.pdf",
+      "score": 382,
+      "time": 1772121348
     },
     {
-      "id": 47163885,
-      "title": "Tell HN: YC companies scrape GitHub activity, send spam emails to users",
-      "url": null,
-      "score": 185,
-      "time": 1772098508
-    },
-    {
-      "id": 47158975,
-      "title": "How will OpenAI compete?",
-      "url": "https://www.ben-evans.com/benedictevans/2026/2/19/how-will-openai-compete-nkg2x",
-      "score": 316,
-      "time": 1772058565
-    },
-    {
-      "id": 47112299,
-      "title": "Artist who \u201cpaints\u201d portraits on glass by hitting it with a hammer",
-      "url": "https://simonbergerart.com",
-      "score": 206,
-      "time": 1771777548
-    },
-    {
-      "id": 47139716,
-      "title": "Large-Scale Online Deanonymization with LLMs",
-      "url": "https://simonlermen.substack.com/p/large-scale-online-deanonymization",
-      "score": 302,
-      "time": 1771953497
-    },
-    {
-      "id": 47111164,
-      "title": "A 26-Gram Butterfly-Inspired Robot Achieving Autonomous Tailless Flight",
-      "url": "https://arxiv.org/abs/2602.06811",
-      "score": 23,
-      "time": 1771769709
-    },
-    {
-      "id": 47125014,
-      "title": "The First Fully General Computer Action Model",
-      "url": "https://si.inc/posts/fdm1/",
-      "score": 287,
-      "time": 1771866000
-    },
-    {
-      "id": 47157841,
-      "title": "An autopsy of AI-generated 3D slop",
-      "url": "https://aircada.com/blog/ai-vs-human-3d-ecommerce",
-      "score": 91,
-      "time": 1772053515
+      "id": 47170174,
+      "title": "Launch HN: Cardboard (YC W26) \u2013 Agentic video editor",
+      "url": "https://www.usecardboard.com/",
+      "score": 125,
+      "time": 1772131118
     }
   ]
 }
